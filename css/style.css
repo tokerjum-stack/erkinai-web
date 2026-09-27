@@ -406,7 +406,9 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 1024px) {
   :root { --section-y: 64px; }
   .hero__inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero__media { order: -1; max-width: 420px; margin: 0 auto; }
+  /* Фото идёт ПОСЛЕ текста: на телефоне человек сначала читает предложение,
+     а уже потом видит портрет */
+  .hero__media { order: 1; max-width: 420px; margin: 0 auto; }
   .hero { padding: 44px 0 64px; }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
