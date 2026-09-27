@@ -1,0 +1,20 @@
+# robots.txt — Эркинай, создание сайтов
+# Домен: https://erkinai.ru
+
+User-agent: *
+Allow: /
+
+# Служебные страницы закрыты мета-тегом noindex, в robots их блокировать не нужно
+Disallow: /*?utm_
+Disallow: /*?yclid=
+Disallow: /*?gclid=
+Disallow: /*?from=
+
+# Убираем рекламные метки из индекса Яндекса
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&from
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&from
+
+Sitemap: https://erkinai.ru/sitemap.xml
