@@ -454,6 +454,9 @@ p:last-child { margin-bottom: 0; }
   .footer__grid { grid-template-columns: 1fr; gap: 26px; }
   .footer__bottom { flex-direction: column; }
   .price-row { flex-wrap: wrap; }
+  /* без этого длинные названия услуг не сжимаются и обрезаются за краем экрана */
+  .price-row__name { flex-shrink: 1; min-width: 0; }
+  .price-row__note { overflow-wrap: anywhere; }
   .price-row__dots { display: none; }
   .price-row__value { margin-left: auto; }
   .steps { grid-template-columns: 1fr 1fr; gap: 20px; }
