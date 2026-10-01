@@ -201,6 +201,7 @@
       copyText(text);
 
       resultBox.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      reachGoal('zayavka');
     });
 
     if (copyAgain) {
@@ -218,6 +219,32 @@
   }
 
   /* ------------------------------------------------------------------------
+     6. Цели Яндекс Метрики
+
+     Автоцели Метрики угадывают действие. Эти метки сообщают точно:
+     заявка ушла именно тогда, когда сообщение реально подготовлено,
+     а не когда человек нажал кнопку с пустыми полями.
+
+     Чтобы работало, в Метрике должны быть созданы цели с теми же
+     именами: zayavka, zvonok, whatsapp. Тип цели — «JavaScript-событие».
+     ------------------------------------------------------------------------ */
+  var METRIKA_ID = 113200907;
+
+  function reachGoal(name) {
+    if (typeof window.ym !== 'function') return;
+    try { window.ym(METRIKA_ID, 'reachGoal', name); } catch (e) {}
+  }
+
+  function initGoals() {
+    $$('a[href^="tel:"]').forEach(function (a) {
+      a.addEventListener('click', function () { reachGoal('zvonok'); });
+    });
+    $$('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function (a) {
+      a.addEventListener('click', function () { reachGoal('whatsapp'); });
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      Инициализация
      ------------------------------------------------------------------------ */
   function init() {
@@ -227,6 +254,7 @@
     initPhoneMask();
     initForm();
     initYear();
+    initGoals();
   }
 
   if (document.readyState === 'loading') {
