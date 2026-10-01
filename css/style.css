@@ -119,6 +119,10 @@ p:last-child { margin-bottom: 0; }
 .grid--aside { grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; }
 @media (max-width: 900px) { .grid--aside { grid-template-columns: minmax(0, 1fr); } }
 
+/* две колонки: текст слева, карточка справа */
+.split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
+@media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
 /* --------------------------------------------------------------------------
    Кнопки
    -------------------------------------------------------------------------- */
