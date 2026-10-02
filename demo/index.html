@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Примеры сайтов — Эля, сайты для малого бизнеса</title>
+<meta name="description" content="Примеры сайтов для кафе, салонов, автосервисов и доставки. Демонстрационные макеты.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://erkinai.ru/demo/">
+
+<style>
+  :root {
+    --sage: #7fb69a;
+    --sage-dark: #4f8a6d;
+    --sage-deep: #3c6b54;
+    --sage-soft: #e7f3ec;
+    --gold: #c9a25c;
+    --gold-soft: #f7f0e2;
+    --cream: #faf7f1;
+    --white: #fff;
+    --ink: #2c3a33;
+    --muted: #66766d;
+    --line: #e4ece6;
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --radius: 20px;
+    --shadow: 0 12px 32px rgba(44,58,51,.08);
+    --shadow-lg: 0 28px 64px rgba(44,58,51,.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 48px 20px 72px; }
+
+  header { text-align: center; margin-bottom: 12px; }
+  .eyebrow {
+    display: inline-block; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--sage-dark); background: var(--sage-soft); padding: 7px 16px; border-radius: 100px;
+    font-weight: 600; margin-bottom: 18px;
+  }
+  h1 { font-family: var(--font-display); font-size: clamp(1.7rem, 5vw, 2.6rem); line-height: 1.2; margin-bottom: 14px; }
+  .sub { color: var(--muted); max-width: 640px; margin: 0 auto 14px; font-size: 1.02rem; }
+  .note {
+    max-width: 660px; margin: 0 auto 44px; font-size: .88rem; color: var(--muted);
+    background: var(--gold-soft); border: 1px solid #ecdcbe; border-radius: 14px; padding: 14px 18px;
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+
+  .card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+  .card__top { padding: 22px 24px 0; }
+  .card__tag {
+    display: inline-block; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--sage-dark); font-weight: 700; margin-bottom: 8px;
+  }
+  .card h2 { font-family: var(--font-display); font-size: 1.32rem; margin-bottom: 8px; line-height: 1.25; }
+  .card p { color: var(--muted); font-size: .93rem; padding: 0 24px 18px; }
+  .card__top p { padding: 0; margin-bottom: 16px; }
+
+  .card__what { padding: 0 24px 22px; margin-top: auto; }
+  .card__what ul { list-style: none; font-size: .89rem; color: var(--muted); margin-bottom: 18px; }
+  .card__what li { position: relative; padding-left: 16px; margin-bottom: 5px; }
+  .card__what li::before {
+    content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 1.5px; background: var(--sage);
+  }
+
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: .95rem;
+    padding: 13px 20px; border-radius: 100px; background: var(--sage-dark); color: #fff;
+    transition: background .16s ease;
+  }
+  .btn:hover { background: var(--sage-deep); }
+
+  .cta {
+    margin-top: 52px; background: var(--white); border: 1px solid var(--line);
+    border-radius: 24px; padding: 36px 28px; text-align: center; box-shadow: var(--shadow);
+  }
+  .cta h2 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 10px; }
+  .cta p { color: var(--muted); max-width: 520px; margin: 0 auto 22px; }
+  .cta__btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .cta__btns .btn { display: inline-block; padding: 13px 28px; background: var(--sage-dark); }
+  .cta__btns .btn--ghost { background: transparent; color: var(--sage-deep); border: 1.5px solid var(--sage); }
+  .cta__btns .btn--ghost:hover { background: var(--sage-soft); }
+
+  footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: .87rem; }
+  footer a { color: var(--sage-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Примеры работ</span>
+    <h1>Как может выглядеть ваш сайт</h1>
+    <p class="sub">
+      Ниже — макеты для разных видов бизнеса. Откройте любой с телефона: так сайт
+      увидят и ваши клиенты, потому что большинство заходит именно с телефона.
+    </p>
+    <p class="note">
+      <b>Важно:</b> это демонстрационные макеты. Названия, цены и фотографии в них —
+      примерные. Ваш сайт будет собран под ваш бизнес: ваше меню, ваши цены, ваши фотографии.
+    </p>
+  </header>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Кафе и кофейни</span>
+        <h2>Кофейня «Тёплый угол»</h2>
+        <p>Меню по категориям, бронь столика, галерея зала.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Меню с ценами по разделам</li>
+          <li>Бронь столика в WhatsApp</li>
+          <li>Атмосфера и фотографии зала</li>
+        </ul>
+        <a class="btn" href="kafe/">Посмотреть макет</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Восточная кухня</span>
+        <h2>Чайхана «Амирхан»</h2>
+        <p>Манты, плов в казане, банкеты и заказ на вынос.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Большое меню с ценами</li>
+          <li>Заказ на вынос и банкеты</li>
+          <li>Рассказ о кухне и поварах</li>
+        </ul>
+        <a class="btn" href="vostok/">Посмотреть макет</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Салон красоты</span>
+        <h2>Студия «Пудра»</h2>
+        <p>Прайс на 42 услуги, мастера, запись с выбором услуги.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Прайс по всем услугам</li>
+          <li>Карточки мастеров</li>
+          <li>Запись с выбором услуги</li>
+        </ul>
+        <a class="btn" href="salon/">Посмотреть макет</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Автосервис</span>
+        <h2>«Гараж 12»</h2>
+        <p>Прайс на работы, запись с указанием марки машины.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Цены на работы и сроки</li>
+          <li>Запись с маркой автомобиля</li>
+          <li>Что делают и чего не делают</li>
+        </ul>
+        <a class="btn" href="avto/">Посмотреть макет</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Доставка</span>
+        <h2>«Ханами»</h2>
+        <p>Корзина и заказ одним сообщением в WhatsApp, без комиссии.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Корзина и подсчёт суммы</li>
+          <li>Заказ в WhatsApp одним сообщением</li>
+          <li>Без комиссии агрегаторов</li>
+        </ul>
+        <a class="btn" href="dostavka/">Посмотреть макет</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__top">
+        <span class="card__tag">Кафе у метро</span>
+        <h2>«Сокровище Шаха»</h2>
+        <p>Кафе на Пражской: меню, три зала, работа до утра.</p>
+      </div>
+      <div class="card__what">
+        <ul>
+          <li>Меню по категориям</li>
+          <li>Режим работы и как добраться</li>
+          <li>Заказ на вынос</li>
+        </ul>
+        <a class="btn" href="sokrovishche/">Посмотреть макет</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="cta">
+    <h2>Хочу такой же сайт</h2>
+    <p>
+      Напишите — задам пару вопросов про ваш бизнес и скажу, сколько это будет стоить
+      и когда смогу начать. Бесплатно и ни к чему не обязывает.
+    </p>
+    <div class="cta__btns">
+      <a class="btn" href="https://wa.me/79218202007" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      <a class="btn btn--ghost" href="https://vk.ru/erkinay.experience" target="_blank" rel="noopener">ВКонтакте</a>
+    </div>
+  </div>
+
+  <footer>
+    Эля — сайты для малого бизнеса · <a href="https://erkinai.ru/">erkinai.ru</a>
+  </footer>
+
+</div>
+</body>
+</html>
