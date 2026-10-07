@@ -7,15 +7,19 @@
 :root {
   /* Палитра */
   --sage:        #7fb69a;
-  --sage-dark:   #4f8a6d;
+  --sage-dark:   #498065;
   --sage-deep:   #3c6b54;
   --sage-soft:   #e7f3ec;
   --gold:        #c9a25c;
+  /* Текстовый вариант золота: --gold на светлых фонах даёт 2.1–2.4:1 и не
+     проходит WCAG AA. --gold-ink глубже в той же бронзовой семье и даёт
+     4.6–5.2:1. Декоративные заливки и тени продолжают использовать --gold. */
+  --gold-ink:    #88672d;
   --gold-soft:   #f7f0e2;
   --cream:       #faf7f1;
   --white:       #ffffff;
   --ink:         #2c3a33;
-  --muted:       #66766d;
+  --muted:       #617067;
   --line:        #e4ece6;
   --line-soft:   #eef4ef;
   --error:       #b4463a;
@@ -71,6 +75,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 3px; border-radius: 4px; }
 ::selection { background: var(--sage); color: #fff; }
 
+/* Ссылка внутри абзаца не должна различаться только цветом: контраст ссылки
+   с окружающим текстом всего 1.94:1, поэтому добавляем подчёркивание
+   (WCAG 1.4.1 «Использование цвета»). Кнопки и навигация не затрагиваются. */
+p a:not(.btn), li a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+p a:not(.btn):hover, li a:not(.btn):hover { text-decoration-thickness: 2px; }
+
 /* --------------------------------------------------------------------------
    Типографика
    -------------------------------------------------------------------------- */
@@ -97,7 +111,7 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin-bottom: 14px;
 }
 
@@ -137,7 +151,7 @@ p:last-child { margin-bottom: 0; }
 }
 .btn--primary { background: var(--sage-dark); color: #fff; box-shadow: 0 8px 22px rgba(79, 138, 109, .3); }
 .btn--primary:hover { background: var(--sage-deep); color: #fff; transform: translateY(-2px); }
-.btn--gold { background: var(--gold); color: #fff; box-shadow: 0 8px 22px rgba(201, 162, 92, .3); }
+.btn--gold { background: var(--gold-ink); color: #fff; box-shadow: 0 8px 22px rgba(201, 162, 92, .3); }
 .btn--gold:hover { filter: brightness(.96); color: #fff; transform: translateY(-2px); }
 .btn--ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
 .btn--ghost:hover { background: var(--ink); color: var(--cream); }
@@ -336,7 +350,7 @@ p:last-child { margin-bottom: 0; }
 .form-wrap { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px; box-shadow: var(--shadow-sm); }
 .field { margin-bottom: 18px; }
 .field label { display: block; font-size: .89rem; font-weight: 600; margin-bottom: 7px; }
-.field .req { color: var(--gold); }
+.field .req { color: var(--gold-ink); }
 .field input, .field select, .field textarea {
   width: 100%; padding: 13px 15px; background: var(--cream);
   border: 1px solid var(--line); border-radius: var(--radius-sm);
@@ -378,16 +392,16 @@ p:last-child { margin-bottom: 0; }
 
 .footer { background: var(--ink); color: rgba(250, 247, 241, .68); padding: 56px 0 0; font-size: .9rem; }
 .footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: 40px; padding-bottom: 40px; }
-.footer h4 { color: var(--cream); font-family: var(--font-body); font-size: .77rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.footer h4, .footer h3 { color: var(--cream); font-family: var(--font-body); font-size: .77rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
 .footer .logo { color: var(--cream); margin-bottom: 14px; }
-.footer .logo__sub { color: rgba(250, 247, 241, .5); }
+.footer .logo__sub { color: rgba(250, 247, 241, .6); }
 .footer a { color: rgba(250, 247, 241, .68); }
 .footer a:hover { color: var(--cream); }
 .footer li { margin-bottom: 9px; }
 .footer__bottom {
   border-top: 1px solid rgba(250, 247, 241, .12);
   padding: 20px 0 26px; display: flex; flex-wrap: wrap;
-  justify-content: space-between; gap: 12px; font-size: .82rem; color: rgba(250, 247, 241, .5);
+  justify-content: space-between; gap: 12px; font-size: .82rem; color: rgba(250, 247, 241, .6);
 }
 
 .mobile-cta {
@@ -558,7 +572,7 @@ p:last-child { margin-bottom: 0; }
   padding: 6px 13px; border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, .93); color: var(--ink);
 }
-.work__badge--real { background: var(--gold); color: #fff; }
+.work__badge--real { background: var(--gold-ink); color: #fff; }
 .work__badge--demo { background: rgba(44, 58, 51, .82); color: var(--cream); }
 
 /* --------------------------------------------------------------------------

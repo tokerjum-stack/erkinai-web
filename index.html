@@ -931,11 +931,11 @@
           </form>
 
           <div class="result" id="form-result">
-            <h3 style="font-size:1.15rem;">Сообщение готово</h3>
+            <h3 id="form-result-title" style="font-size:1.15rem;">Сообщение готово</h3>
             <p style="font-size:.92rem; color:var(--muted); margin-top:0;">
               Текст скопирован в буфер обмена. Отправьте его мне — куда удобнее.
             </p>
-            <textarea id="result-text" readonly></textarea>
+            <textarea id="result-text" readonly aria-labelledby="form-result-title"></textarea>
             <div class="btn-row">
               <a class="btn btn--primary" id="wa-link" href="#" target="_blank" rel="noopener">Отправить в WhatsApp</a>
               <button class="btn btn--light" type="button" id="copy-again">Скопировать ещё раз</button>
@@ -1039,7 +1039,7 @@
       </div>
 
       <div>
-        <h4>Разделы</h4>
+        <h3>Разделы</h3>
         <ul>
           <li><a href="#services">Услуги</a></li>
           <li><a href="portfolio.html">Портфолио</a></li>
@@ -1055,7 +1055,7 @@
       </div>
 
       <div>
-        <h4>Контакты</h4>
+        <h3>Контакты</h3>
         <ul>
           <li><a href="https://wa.me/79218202007" target="_blank" rel="noopener">Написать в WhatsApp</a></li>
           <li>WhatsApp, МАКС и ВКонтакте</li>

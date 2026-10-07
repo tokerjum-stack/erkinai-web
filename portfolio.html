@@ -124,10 +124,10 @@
         В вашем сайте будут ваши данные, ваши фотографии и ваше меню или прайс.
       </div>
 
-      <div class="filters" role="tablist" aria-label="Фильтр работ">
-        <button class="filter-btn is-active" type="button" data-filter="all">Все работы</button>
-        <button class="filter-btn" type="button" data-filter="real">Готовые сайты</button>
-        <button class="filter-btn" type="button" data-filter="demo">Демо-макеты по сферам</button>
+      <div class="filters" role="group" aria-label="Фильтр работ">
+        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Все работы</button>
+        <button class="filter-btn" type="button" data-filter="real" aria-pressed="false">Готовые сайты</button>
+        <button class="filter-btn" type="button" data-filter="demo" aria-pressed="false">Демо-макеты по сферам</button>
       </div>
 
       <div class="grid grid--3">
@@ -138,7 +138,7 @@
             <span class="work__cover-title">AURA<br>студия косметологии</span>
           </div>
           <div class="work__body">
-            <h3>Многостраничный сайт студии косметологии</h3>
+            <h2>Многостраничный сайт студии косметологии</h2>
             <p>Восемь страниц: услуги с описанием, витрина косметики, прайс, онлайн-запись, контакты.
             Форма записи с проверкой полей, микроразметка для Яндекса, адаптив под телефон.</p>
             <div class="tags">
@@ -157,7 +157,7 @@
             <span class="work__cover-title">Английский<br>с Самарой</span>
           </div>
           <div class="work__body">
-            <h3>Сайт репетитора английского языка</h3>
+            <h2>Сайт репетитора английского языка</h2>
             <p>Реальный заказчик. Программы занятий, цены, отзывы учеников, ответы на вопросы.
             Заявка собирает данные и открывает WhatsApp — клиенту остаётся нажать «отправить».</p>
             <div class="tags">
@@ -175,7 +175,7 @@
             <span class="work__cover-title">Личная<br>визитка</span>
           </div>
           <div class="work__body">
-            <h3>Сайт-визитка</h3>
+            <h2>Сайт-визитка</h2>
             <p>Мой собственный сайт. Мягкий дизайн, разговор с посетителем, форма обращения,
             которая готовит текст сообщения. Плавные появления блоков при прокрутке.</p>
             <div class="tags">
@@ -193,7 +193,7 @@
             <span class="work__cover-title">Кофейня</span>
           </div>
           <div class="work__body">
-            <h3>Кофейня, кафе, бар</h3>
+            <h2>Кофейня, кафе, бар</h2>
             <p>Меню с ценами по категориям, преимущества, галерея зала, отзывы, акции, вопросы-ответы
             и бронь столика. Гость видит цены и бронирует, не звоня в зал.</p>
             <div class="tags">
@@ -212,7 +212,7 @@
             <span class="work__cover-title">Чайхана<br>и восточная кухня</span>
           </div>
           <div class="work__body">
-            <h3>Чайхана, манты, плов</h3>
+            <h2>Чайхана, манты, плов</h2>
             <p>Меню из шести разделов, бронь стола, банкеты и заказы на вынос.
             Отдельный блок под большие компании и праздники — важная история для ресторанов.</p>
             <div class="tags">
@@ -230,7 +230,7 @@
             <span class="work__cover-title">Студия<br>красоты</span>
           </div>
           <div class="work__body">
-            <h3>Салон красоты и мастера</h3>
+            <h2>Салон красоты и мастера</h2>
             <p>Прайс из 42 позиций по шести разделам, мастера с описанием, галерея работ,
             запись с выбором услуги. Подходит салонам, барбершопам и частным мастерам.</p>
             <div class="tags">
@@ -248,7 +248,7 @@
             <span class="work__cover-title">Автосервис</span>
           </div>
           <div class="work__body">
-            <h3>Автосервис и ремонт</h3>
+            <h2>Автосервис и ремонт</h2>
             <p>Прайс на работы без стоимости запчастей, гарантия, мастера, отзывы.
             Запись с указанием марки машины и неисправности — экономит время и вам, и клиенту.</p>
             <div class="tags">
@@ -304,7 +304,7 @@
       </div>
 
       <div>
-        <h4>Разделы</h4>
+        <h3>Разделы</h3>
         <ul>
           <li><a href="index.html#services">Услуги</a></li>
           <li><a href="portfolio.html">Портфолио</a></li>
@@ -317,7 +317,7 @@
       </div>
 
       <div>
-        <h4>Контакты</h4>
+        <h3>Контакты</h3>
         <ul>
           <li><a href="https://wa.me/79218202007" target="_blank" rel="noopener">Написать в WhatsApp</a></li>
           <li><a href="https://vk.ru/erkinay.experience" target="_blank" rel="noopener">Моя страница ВКонтакте</a></li>
@@ -350,7 +350,10 @@
   Array.prototype.forEach.call(buttons, function (btn) {
     btn.addEventListener('click', function () {
       var f = btn.getAttribute('data-filter');
-      Array.prototype.forEach.call(buttons, function (b) { b.classList.toggle('is-active', b === btn); });
+      Array.prototype.forEach.call(buttons, function (b) {
+        b.classList.toggle('is-active', b === btn);
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
       Array.prototype.forEach.call(works, function (w) {
         var show = (f === 'all') || (w.getAttribute('data-kind') === f);
         w.classList.toggle('is-hidden', !show);
