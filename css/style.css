@@ -288,6 +288,7 @@ p:last-child { margin-bottom: 0; }
 .work__cover--linen   { background: linear-gradient(140deg, #efe7dc, #d9c9b6); }
 .work__cover--mint    { background: linear-gradient(140deg, #e3efea, #c2dcd2); }
 .work__cover--slate   { background: linear-gradient(140deg, #3a3f46, #6b7480); }
+.work__cover--sand    { background: linear-gradient(140deg, #f5ece1, #e0cbb3); }
 
 .work__cover-title {
   font-family: var(--font-display); font-size: 1.6rem; line-height: 1.2;
