@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — знак бренда: круг-арка и геометричная монограмма A, золото и тёмный на кремовом -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="logo-gold" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#C2A24B"/>
+      <stop offset="0.55" stop-color="#C2A24B" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#C2A24B" stop-opacity="0.68"/>
+    </linearGradient>
+    <linearGradient id="logo-ink" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#2B2422"/>
+      <stop offset="1" stop-color="#7C6F68"/>
+    </linearGradient>
+    <g id="logo-leaf-g">
+      <path d="M0 0C9 -6 21 -6 30 0C21 6 9 6 0 0Z"/>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="120" height="120" rx="28" fill="#FBF7F3"/>
+  <circle cx="60" cy="60" r="45" fill="none" stroke="url(#logo-gold)" stroke-width="2.6"/>
+  <circle cx="60" cy="60" r="37.5" fill="none" stroke="#E8DCD2" stroke-width="1.2"/>
+  <path d="M18 60A42 42 0 0 1 60 18" fill="none" stroke="#C2A24B" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M102 60A42 42 0 0 1 60 102" fill="none" stroke="#C2A24B" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <path d="M60 30L39 90" fill="none" stroke="url(#logo-ink)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M60 30L81 90" fill="none" stroke="url(#logo-ink)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M47 68H73" fill="none" stroke="#C2A24B" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="60" cy="30" r="4.2" fill="#C2A24B"/>
+
+  <g fill="#93A08A" fill-opacity="0.6">
+    <use href="#logo-leaf-g" transform="translate(38 92) rotate(-146) scale(0.6)"/>
+    <use href="#logo-leaf-g" transform="translate(82 92) rotate(146) scale(-0.6 0.6)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — favicon: упрощённый знак бренда, читаемый в 16px -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="#FBF7F3"/>
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="#C2A24B" stroke-width="5"/>
+  <path d="M32 16L19 48" fill="none" stroke="#2B2422" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M32 16L45 48" fill="none" stroke="#2B2422" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M24 36H40" fill="none" stroke="#C2A24B" stroke-width="6.5" stroke-linecap="round"/>
+</svg>

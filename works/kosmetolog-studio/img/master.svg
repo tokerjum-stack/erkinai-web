@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — вертикальный портрет-заглушка мастера-косметолога -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <linearGradient id="mtr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF7F3"/>
+      <stop offset="0.62" stop-color="#FBF7F3"/>
+      <stop offset="1" stop-color="#F2E9DF"/>
+    </linearGradient>
+    <linearGradient id="mtr-arch" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#F2E9DF"/>
+      <stop offset="0.5" stop-color="#E8DCD2"/>
+      <stop offset="1" stop-color="#F2E9DF"/>
+    </linearGradient>
+    <radialGradient id="mtr-glow">
+      <stop offset="0" stop-color="#C2A24B" stop-opacity="0.28"/>
+      <stop offset="0.6" stop-color="#C2A24B" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#C2A24B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mtr-halo-rose">
+      <stop offset="0" stop-color="#C1877A" stop-opacity="0.3"/>
+      <stop offset="0.6" stop-color="#C1877A" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#C1877A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mtr-shadow">
+      <stop offset="0" stop-color="#2B2422" stop-opacity="0.2"/>
+      <stop offset="0.65" stop-color="#2B2422" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#2B2422" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mtr-figure" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#C1877A"/>
+      <stop offset="0.55" stop-color="#C1877A"/>
+      <stop offset="1" stop-color="#A96A5C"/>
+    </linearGradient>
+    <linearGradient id="mtr-hair" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#A96A5C"/>
+      <stop offset="1" stop-color="#A96A5C" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="mtr-sage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93A08A"/>
+      <stop offset="1" stop-color="#93A08A" stop-opacity="0.7"/>
+    </linearGradient>
+    <g id="mtr-leaf-g">
+      <path d="M0 0C20 -13 48 -13 68 0C48 13 20 13 0 0Z"/>
+      <path d="M7 0H58" fill="none" stroke="#FBF7F3" stroke-opacity="0.3" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="1100" fill="url(#mtr-bg)"/>
+  <circle cx="450" cy="980" r="520" fill="url(#mtr-halo-rose)"/>
+
+  <path d="M150 1010L150 560C150 380 300 240 450 240C600 240 750 380 750 560L750 1010Z" fill="url(#mtr-arch)"/>
+  <path d="M150 1010L150 560C150 380 300 240 450 240C600 240 750 380 750 560L750 1010Z" fill="none" stroke="#E8DCD2" stroke-width="2"/>
+  <path d="M192 1010L192 572C192 412 312 292 450 292C588 292 708 412 708 572L708 1010" fill="none" stroke="#C2A24B" stroke-width="1.2" stroke-opacity="0.34"/>
+  <path d="M228 1010L228 586C228 444 334 340 450 340C566 340 672 444 672 586L672 1010" fill="none" stroke="#FBF7F3" stroke-width="1.4" stroke-opacity="0.7"/>
+
+  <circle cx="450" cy="470" r="270" fill="url(#mtr-glow)"/>
+
+  <ellipse cx="450" cy="620" rx="150" ry="160" fill="url(#mtr-hair)"/>
+  <circle cx="450" cy="468" r="78" fill="url(#mtr-hair)"/>
+  <rect x="404" y="514" width="92" height="24" rx="12" fill="#A96A5C" fill-opacity="0.55"/>
+  <rect x="410" y="690" width="80" height="130" rx="40" fill="url(#mtr-figure)"/>
+  <ellipse cx="450" cy="634" rx="120" ry="146" fill="url(#mtr-figure)"/>
+  <path d="M368 566C388 528 428 508 470 512" fill="none" stroke="#FBF7F3" stroke-width="10" stroke-opacity="0.16" stroke-linecap="round"/>
+  <path d="M186 1010C206 880 316 806 450 806C584 806 694 880 714 1010Z" fill="url(#mtr-figure)"/>
+  <path d="M262 1010C280 910 352 848 450 836" fill="none" stroke="#FBF7F3" stroke-width="16" stroke-opacity="0.14" stroke-linecap="round"/>
+  <ellipse cx="450" cy="1006" rx="300" ry="28" fill="url(#mtr-shadow)"/>
+
+  <g stroke="#93A08A" stroke-width="4" stroke-linecap="round" fill="none" stroke-opacity="0.75">
+    <path d="M700 992C676 940 660 894 656 852"/>
+  </g>
+  <g fill="url(#mtr-sage)" opacity="0.8">
+    <use href="#mtr-leaf-g" transform="translate(664 900) rotate(-118) scale(0.9)"/>
+    <use href="#mtr-leaf-g" transform="translate(668 936) rotate(-60) scale(0.8)"/>
+    <use href="#mtr-leaf-g" transform="translate(688 962) rotate(-126) scale(0.72)"/>
+  </g>
+  <g stroke="#93A08A" stroke-width="4" stroke-linecap="round" fill="none" stroke-opacity="0.6">
+    <path d="M204 986C228 934 246 890 252 850"/>
+  </g>
+  <g fill="url(#mtr-sage)" opacity="0.65">
+    <use href="#mtr-leaf-g" transform="translate(232 906) rotate(62) scale(-0.88 0.88)"/>
+    <use href="#mtr-leaf-g" transform="translate(222 944) rotate(120) scale(-0.76 0.76)"/>
+  </g>
+
+  <g>
+    <circle cx="316" cy="352" r="8" fill="#C2A24B" fill-opacity="0.55"/>
+    <circle cx="586" cy="330" r="6" fill="#C1877A" fill-opacity="0.5"/>
+    <circle cx="640" cy="700" r="7" fill="#C2A24B" fill-opacity="0.35"/>
+    <circle cx="272" cy="700" r="5" fill="#C1877A" fill-opacity="0.4"/>
+    <circle cx="450" cy="200" r="6" fill="#C2A24B" fill-opacity="0.45"/>
+  </g>
+</svg>

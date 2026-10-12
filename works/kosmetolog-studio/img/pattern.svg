@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — бесшовный тайл-паттерн для фона секций: точки и мини-листики -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <g id="pat-leaf-g">
+      <path d="M0 0C10 -7 24 -7 34 0C24 7 10 7 0 0Z"/>
+      <path d="M4 0H29" fill="none" stroke="#F2E9DF" stroke-width="0.9" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <g fill="#E8DCD2">
+    <circle cx="0" cy="0" r="2.6"/>
+    <circle cx="120" cy="0" r="2.6"/>
+    <circle cx="0" cy="120" r="2.6"/>
+    <circle cx="120" cy="120" r="2.6"/>
+    <circle cx="60" cy="0" r="1.7"/>
+    <circle cx="0" cy="60" r="1.7"/>
+    <circle cx="120" cy="60" r="1.7"/>
+    <circle cx="60" cy="120" r="1.7"/>
+    <circle cx="60" cy="60" r="2.2"/>
+  </g>
+
+  <g stroke="#E8DCD2" stroke-width="1.2" stroke-linecap="round" fill="none" stroke-opacity="0.9">
+    <path d="M60 78C60 68 60 58 60 50"/>
+    <path d="M36 36C42 30 50 30 54 34"/>
+  </g>
+
+  <g fill="#E8DCD2" fill-opacity="0.95">
+    <use href="#pat-leaf-g" transform="translate(60 50) rotate(-38) scale(0.62)"/>
+    <use href="#pat-leaf-g" transform="translate(60 62) rotate(-142) scale(0.62)"/>
+    <use href="#pat-leaf-g" transform="translate(38 38) rotate(-30) scale(0.5)"/>
+    <use href="#pat-leaf-g" transform="translate(82 82) rotate(-30) scale(0.5)"/>
+    <use href="#pat-leaf-g" transform="translate(82 38) rotate(-150) scale(0.5)"/>
+    <use href="#pat-leaf-g" transform="translate(38 82) rotate(-150) scale(0.5)"/>
+  </g>
+
+  <g fill="#C1877A" fill-opacity="0.16">
+    <circle cx="30" cy="30" r="1.6"/>
+    <circle cx="90" cy="30" r="1.6"/>
+    <circle cx="30" cy="90" r="1.6"/>
+    <circle cx="90" cy="90" r="1.6"/>
+  </g>
+  <g fill="#93A08A" fill-opacity="0.14">
+    <circle cx="60" cy="30" r="1.3"/>
+    <circle cx="30" cy="60" r="1.3"/>
+    <circle cx="90" cy="60" r="1.3"/>
+    <circle cx="60" cy="90" r="1.3"/>
+  </g>
+</svg>

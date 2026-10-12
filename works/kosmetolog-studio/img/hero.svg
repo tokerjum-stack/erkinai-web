@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — главная иллюстрация первого экрана: абстрактная спа-композиция -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBF7F3"/>
+      <stop offset="0.58" stop-color="#FBF7F3"/>
+      <stop offset="1" stop-color="#F2E9DF"/>
+    </linearGradient>
+    <radialGradient id="hero-halo-sand">
+      <stop offset="0" stop-color="#F2E9DF" stop-opacity="0.75"/>
+      <stop offset="0.62" stop-color="#F2E9DF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#F2E9DF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-halo-rose">
+      <stop offset="0" stop-color="#C1877A" stop-opacity="0.3"/>
+      <stop offset="0.55" stop-color="#C1877A" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#C1877A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-halo-gold">
+      <stop offset="0" stop-color="#C2A24B" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#C2A24B" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#C2A24B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-halo-sage">
+      <stop offset="0" stop-color="#93A08A" stop-opacity="0.28"/>
+      <stop offset="0.65" stop-color="#93A08A" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#93A08A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hero-shadow">
+      <stop offset="0" stop-color="#2B2422" stop-opacity="0.18"/>
+      <stop offset="0.65" stop-color="#2B2422" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#2B2422" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hero-glass-dark" x1="0.1" y1="0" x2="0.95" y2="1">
+      <stop offset="0" stop-color="#7C6F68"/>
+      <stop offset="0.32" stop-color="#2B2422"/>
+      <stop offset="0.72" stop-color="#2B2422"/>
+      <stop offset="1" stop-color="#7C6F68"/>
+    </linearGradient>
+    <linearGradient id="hero-glass-sand" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#FBF7F3"/>
+      <stop offset="0.5" stop-color="#F2E9DF"/>
+      <stop offset="1" stop-color="#E8DCD2"/>
+    </linearGradient>
+    <linearGradient id="hero-gold" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#C2A24B"/>
+      <stop offset="0.5" stop-color="#C2A24B" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#C2A24B" stop-opacity="0.64"/>
+    </linearGradient>
+    <linearGradient id="hero-rose" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#C1877A"/>
+      <stop offset="0.55" stop-color="#C1877A"/>
+      <stop offset="1" stop-color="#A96A5C"/>
+    </linearGradient>
+    <linearGradient id="hero-sage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93A08A"/>
+      <stop offset="1" stop-color="#93A08A" stop-opacity="0.72"/>
+    </linearGradient>
+    <g id="hero-leaf-g">
+      <path d="M0 0C20 -13 48 -13 68 0C48 13 20 13 0 0Z"/>
+      <path d="M7 0H58" fill="none" stroke="#FBF7F3" stroke-opacity="0.3" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="900" fill="url(#hero-bg)"/>
+  <ellipse cx="905" cy="390" rx="430" ry="388" fill="url(#hero-halo-sand)"/>
+  <circle cx="862" cy="330" r="300" fill="url(#hero-halo-rose)"/>
+  <circle cx="1035" cy="140" r="200" fill="url(#hero-halo-gold)"/>
+  <ellipse cx="700" cy="820" rx="470" ry="185" fill="url(#hero-halo-sage)"/>
+
+  <circle cx="845" cy="400" r="300" fill="none" stroke="#E8DCD2" stroke-width="1.6" stroke-opacity="0.9"/>
+  <circle cx="845" cy="400" r="372" fill="none" stroke="#C2A24B" stroke-width="1.1" stroke-opacity="0.24"/>
+  <circle cx="845" cy="400" r="248" fill="none" stroke="#C2A24B" stroke-width="1" stroke-opacity="0.16"/>
+
+  <g stroke="#93A08A" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.95">
+    <path d="M300 906C372 792 468 716 556 660C640 606 700 540 736 462"/>
+  </g>
+  <g fill="url(#hero-sage)">
+    <use href="#hero-leaf-g" transform="translate(352 845) rotate(-52) scale(1.15)"/>
+    <use href="#hero-leaf-g" transform="translate(392 812) rotate(-128) scale(1)"/>
+    <use href="#hero-leaf-g" transform="translate(448 764) rotate(-46) scale(1.25)"/>
+    <use href="#hero-leaf-g" transform="translate(496 724) rotate(-132) scale(1.05)"/>
+    <use href="#hero-leaf-g" transform="translate(552 674) rotate(-44) scale(1.3)"/>
+    <use href="#hero-leaf-g" transform="translate(600 628) rotate(-136) scale(1.1)"/>
+    <use href="#hero-leaf-g" transform="translate(654 574) rotate(-40) scale(1.25)"/>
+    <use href="#hero-leaf-g" transform="translate(690 528) rotate(-130) scale(1)"/>
+    <use href="#hero-leaf-g" transform="translate(722 486) rotate(-34) scale(1.1)"/>
+  </g>
+  <g fill="url(#hero-sage)">
+    <use href="#hero-leaf-g" transform="translate(648 300) rotate(-30) scale(0.85)" opacity="0.55"/>
+    <use href="#hero-leaf-g" transform="translate(706 238) rotate(-62) scale(0.7)" opacity="0.45"/>
+    <use href="#hero-leaf-g" transform="translate(608 232) rotate(-6) scale(0.6)" opacity="0.4"/>
+    <use href="#hero-leaf-g" transform="translate(1032 596) rotate(-124) scale(0.72)" opacity="0.4"/>
+  </g>
+
+  <ellipse cx="748" cy="654" rx="286" ry="44" fill="url(#hero-shadow)"/>
+
+  <g>
+    <rect x="612" y="520" width="124" height="124" rx="30" fill="url(#hero-glass-sand)"/>
+    <rect x="620" y="562" width="108" height="74" rx="22" fill="#C1877A" fill-opacity="0.18"/>
+    <rect x="622" y="530" width="104" height="10" rx="5" fill="#FBF7F3" fill-opacity="0.55"/>
+    <rect x="622" y="536" width="12" height="98" rx="6" fill="#FBF7F3" fill-opacity="0.6"/>
+    <rect x="612" y="520" width="124" height="124" rx="30" fill="none" stroke="#E8DCD2" stroke-width="1.4"/>
+    <rect x="604" y="474" width="140" height="58" rx="18" fill="url(#hero-rose)"/>
+    <rect x="604" y="518" width="140" height="12" rx="6" fill="#A96A5C" fill-opacity="0.55"/>
+    <rect x="616" y="482" width="46" height="12" rx="6" fill="#FBF7F3" fill-opacity="0.38"/>
+  </g>
+
+  <g>
+    <rect x="814" y="250" width="56" height="100" rx="28" fill="url(#hero-gold)"/>
+    <rect x="824" y="260" width="12" height="60" rx="6" fill="#FBF7F3" fill-opacity="0.35"/>
+    <rect x="808" y="342" width="68" height="24" rx="8" fill="#C2A24B"/>
+    <rect x="826" y="364" width="32" height="28" fill="url(#hero-glass-dark)"/>
+    <rect x="784" y="386" width="116" height="238" rx="24" fill="url(#hero-glass-dark)"/>
+    <rect x="792" y="500" width="100" height="112" rx="18" fill="#C1877A" fill-opacity="0.22"/>
+    <rect x="800" y="452" width="84" height="96" rx="12" fill="#FBF7F3" fill-opacity="0.93"/>
+    <circle cx="842" cy="484" r="9" fill="#C1877A"/>
+    <rect x="812" y="504" width="60" height="4" rx="2" fill="#93A08A" fill-opacity="0.5"/>
+    <rect x="812" y="516" width="44" height="4" rx="2" fill="#E8DCD2"/>
+    <rect x="794" y="398" width="14" height="200" rx="7" fill="#FBF7F3" fill-opacity="0.3"/>
+    <rect x="878" y="400" width="8" height="180" rx="4" fill="#FBF7F3" fill-opacity="0.12"/>
+    <rect x="784" y="386" width="116" height="238" rx="24" fill="none" stroke="#E8DCD2" stroke-width="1.2" stroke-opacity="0.35"/>
+  </g>
+
+  <g>
+    <circle cx="664" cy="300" r="9" fill="#C2A24B" fill-opacity="0.5"/>
+    <circle cx="714" cy="248" r="6" fill="#C1877A" fill-opacity="0.45"/>
+    <circle cx="986" cy="520" r="12" fill="#C1877A" fill-opacity="0.24"/>
+    <circle cx="1040" cy="602" r="7" fill="#C2A24B" fill-opacity="0.35"/>
+    <circle cx="620" cy="716" r="5" fill="#93A08A" fill-opacity="0.5"/>
+    <circle cx="952" cy="762" r="6" fill="#C2A24B" fill-opacity="0.28"/>
+  </g>
+</svg>

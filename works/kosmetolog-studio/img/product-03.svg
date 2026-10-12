@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AURA cosmetics — карточка каталога: тюбик шалфейно-зелёный с крышкой-флип-топ -->
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600">
+  <defs>
+    <linearGradient id="p03-sage" x1="0.08" y1="0" x2="0.92" y2="1">
+      <stop offset="0" stop-color="#93A08A"/>
+      <stop offset="0.45" stop-color="#93A08A"/>
+      <stop offset="1" stop-color="#7C6F68"/>
+    </linearGradient>
+    <linearGradient id="p03-cap" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#7C6F68"/>
+      <stop offset="0.5" stop-color="#93A08A"/>
+      <stop offset="1" stop-color="#93A08A" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="p03-shadow">
+      <stop offset="0" stop-color="#2B2422" stop-opacity="0.2"/>
+      <stop offset="0.6" stop-color="#2B2422" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#2B2422" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="240" cy="524" rx="98" ry="18" fill="url(#p03-shadow)"/>
+
+  <rect x="214" y="148" width="52" height="64" rx="14" fill="url(#p03-cap)"/>
+  <rect x="222" y="156" width="10" height="46" rx="5" fill="#FBF7F3" fill-opacity="0.28"/>
+  <path d="M232 148C240 138 240 138 248 148Z" fill="#7C6F68" fill-opacity="0.75"/>
+  <rect x="206" y="206" width="68" height="12" rx="6" fill="#7C6F68" fill-opacity="0.5"/>
+
+  <path d="M178 216C178 200 190 194 206 194L274 194C290 194 302 200 302 216L302 448C302 460 294 470 282 470L198 470C186 470 178 460 178 448Z" fill="url(#p03-sage)"/>
+  <rect x="196" y="470" width="88" height="34" rx="6" fill="#93A08A"/>
+  <rect x="204" y="474" width="4" height="26" rx="2" fill="#FBF7F3" fill-opacity="0.22"/>
+  <rect x="220" y="474" width="4" height="26" rx="2" fill="#FBF7F3" fill-opacity="0.22"/>
+  <rect x="236" y="474" width="4" height="26" rx="2" fill="#FBF7F3" fill-opacity="0.22"/>
+  <rect x="252" y="474" width="4" height="26" rx="2" fill="#FBF7F3" fill-opacity="0.22"/>
+  <rect x="268" y="474" width="4" height="26" rx="2" fill="#FBF7F3" fill-opacity="0.22"/>
+
+  <rect x="194" y="278" width="92" height="112" rx="14" fill="#FBF7F3" fill-opacity="0.92"/>
+  <circle cx="240" cy="312" r="10" fill="#C1877A"/>
+  <rect x="212" y="336" width="56" height="5" rx="2.5" fill="#93A08A" fill-opacity="0.55"/>
+  <rect x="212" y="350" width="40" height="5" rx="2.5" fill="#E8DCD2"/>
+  <rect x="188" y="212" width="12" height="234" rx="6" fill="#FBF7F3" fill-opacity="0.26"/>
+  <rect x="286" y="214" width="8" height="220" rx="4" fill="#2B2422" fill-opacity="0.1"/>
+  <path d="M178 216C178 200 190 194 206 194L274 194C290 194 302 200 302 216L302 448C302 460 294 470 282 470L198 470C186 470 178 460 178 448Z" fill="none" stroke="#FBF7F3" stroke-width="1.2" stroke-opacity="0.28"/>
+</svg>

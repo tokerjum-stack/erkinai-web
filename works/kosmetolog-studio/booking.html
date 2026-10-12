@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Онлайн-запись к косметологу в Москве | AURA</title>
+<meta name="description" content="Запишитесь онлайн к косметологу в студии AURA: массаж, уход за лицом, пилинг, аппаратные процедуры. Свободные слоты на этой неделе, подтверждение за 15 минут.">
+<meta name="keywords" content="записаться к косметологу москва, онлайн запись косметология, запись на массаж лица, запись на пилинг">
+<link rel="canonical" href="https://erkinai.ru/works/kosmetolog-studio/booking.html">
+<meta name="robots" content="index, follow">
+
+<meta name="geo.region" content="RU-MOW">
+<meta name="geo.placename" content="Москва">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="AURA — студия косметологии">
+<meta property="og:title" content="Онлайн-запись — AURA">
+<meta property="og:description" content="Запись к косметологу онлайн. Подтверждаем время в течение 15 минут.">
+<meta property="og:url" content="https://erkinai.ru/works/kosmetolog-studio/booking.html">
+<meta property="og:image" content="https://erkinai.ru/works/kosmetolog-studio/img/og-cover.svg">
+<meta name="theme-color" content="#FBF7F3">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://erkinai.ru/works/kosmetolog-studio/" },
+    { "@type": "ListItem", "position": 2, "name": "Онлайн-запись", "item": "https://erkinai.ru/works/kosmetolog-studio/booking.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="AURA — на главную">
+      <img src="img/logo.svg" alt="" width="34" height="34">
+      <span>Aura<span class="logo__sub">студия косметологии</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="cosmetics.html">Косметика</a>
+      <a href="prices.html">Цены</a>
+      <a href="contacts.html">Контакты</a>
+      <a class="btn btn--primary btn--block" href="booking.html" aria-current="page">Записаться</a>
+    </nav>
+    <div class="header__cta">
+      <a class="header__phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+      <a class="btn btn--primary btn--sm" href="booking.html">Записаться</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-head">
+    <div class="container">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li>Онлайн-запись</li>
+      </ol>
+      <h1>Онлайн-запись</h1>
+      <p class="lead" style="max-width:720px;margin:0;">
+        Заполните форму — мы свяжемся с вами в течение 15 минут, подтвердим время
+        и ответим на вопросы. Первичная консультация с диагностикой кожи бесплатная.
+      </p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--aside">
+
+        <!-- ФОРМА -->
+        <div class="form-wrap reveal">
+          <h2 style="font-size:1.5rem;">Заявка на визит</h2>
+          <p class="lead" style="margin-bottom:28px;">Поля со звёздочкой обязательны.</p>
+
+          <form id="booking-form" novalidate>
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="field-name">Ваше имя <span class="req">*</span></label>
+                <input type="text" id="field-name" name="name" autocomplete="name" placeholder="Например, Анна" required>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="field-phone">Телефон <span class="req">*</span></label>
+                <input type="tel" id="field-phone" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" inputmode="tel" required>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="field-service">Услуга <span class="req">*</span></label>
+                <select id="field-service" name="service" required>
+                  <option value="">Выберите направление</option>
+                  <optgroup label="Массажи">
+                    <option value="massage">Массаж — классический, лимфодренажный, буккальный</option>
+                  </optgroup>
+                  <optgroup label="Уходы">
+                    <option value="care">Уход за лицом — чистка, увлажнение, anti-age</option>
+                  </optgroup>
+                  <optgroup label="Пилинги">
+                    <option value="peeling">Пилинг — миндальный, салициловый, карбоновый</option>
+                  </optgroup>
+                  <optgroup label="Аппаратные процедуры">
+                    <option value="hardware">Аппаратная косметология — УЗ-чистка, RF-лифтинг</option>
+                  </optgroup>
+                  <optgroup label="Инъекции">
+                    <option value="injection">Инъекционная косметология — консультация</option>
+                  </optgroup>
+                  <optgroup label="Другое">
+                    <option value="hair">Эпиляция и депиляция</option>
+                    <option value="brows">Брови и ресницы</option>
+                    <option value="spa">SPA и уход за телом</option>
+                    <option value="consult">Не знаю — нужна консультация</option>
+                  </optgroup>
+                </select>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="field-date">Дата визита <span class="req">*</span></label>
+                <input type="date" id="field-date" name="date" required>
+                <span class="field__hint">Можно выбрать любую дату, начиная с сегодняшней</span>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="field-time">Удобное время</label>
+                <select id="field-time" name="time">
+                  <option value="">Любое время</option>
+                  <option value="10:00–12:00">Утро, 10:00–12:00</option>
+                  <option value="12:00–15:00">День, 12:00–15:00</option>
+                  <option value="15:00–18:00">После обеда, 15:00–18:00</option>
+                  <option value="18:00–21:00">Вечер, 18:00–21:00</option>
+                </select>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="field-comment">Комментарий</label>
+                <textarea id="field-comment" name="comment" placeholder="Расскажите о задаче: тип кожи, аллергии, прошлые процедуры, пожелания по времени"></textarea>
+                <span class="field__hint">Чем подробнее, тем точнее подберём процедуру</span>
+              </div>
+
+              <div class="field field--full">
+                <label class="consent" for="field-consent">
+                  <input type="checkbox" id="field-consent" name="consent" required>
+                  <span>
+                    Согласен(а) на обработку персональных данных и с
+                    <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a>.
+                    Данные используются только для подтверждения записи.
+                  </span>
+                </label>
+                <span class="field__error" role="alert"></span>
+              </div>
+
+              <div class="field field--full">
+                <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+                <p class="field__hint" style="text-align:center;margin-top:12px;">
+                  Обычно отвечаем в течение 15 минут в рабочее время.
+                  Срочно? Звоните: <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- БОКОВАЯ КОЛОНКА -->
+        <aside class="reveal">
+          <div class="card">
+            <h3>Как это работает</h3>
+            <ul class="checklist">
+              <li>Вы оставляете заявку на удобные дату и время</li>
+              <li>Мы перезваниваем в течение 15 минут и подтверждаем слот</li>
+              <li>Приходите за 5 минут до визита — без очередей</li>
+              <li>Диагностика кожи и подбор программы — бесплатно</li>
+            </ul>
+          </div>
+
+          <div class="card mt-32">
+            <h3>Контакты</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="info-list__label">Телефон</span>
+                  <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </div>
+              </li>
+              <li>
+                <span class="info-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="info-list__label">Почта</span>
+                  <a href="mailto:hello@aura-studio.ru">hello@aura-studio.ru</a>
+                </div>
+              </li>
+              <li>
+                <span class="info-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="info-list__label">Адрес</span>
+                  Москва, ул. Малая Бронная, 14, стр. 2, офис 305
+                </div>
+              </li>
+              <li>
+                <span class="info-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+                  </svg>
+                </span>
+                <div>
+                  <span class="info-list__label">Часы работы</span>
+                  Пн–Сб 10:00–21:00<br>Вс 11:00–18:00
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card mt-32">
+            <h3>Отмена и перенос</h3>
+            <p>Если планы изменились — предупредите минимум за 3 часа. Перенесём визит на удобное время без потери места в расписании.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <img src="img/logo.svg" alt="" width="34" height="34">
+          <span>Aura<span class="logo__sub">студия косметологии</span></span>
+        </a>
+        <p>Студия эстетической косметологии в Москве. Массажи, уходы, пилинги и аппаратные процедуры по индивидуальным протоколам.</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="cosmetics.html">Витрина косметики</a></li>
+          <li><a href="prices.html">Цены</a></li>
+          <li><a href="booking.html">Онлайн-запись</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="services.html#massage">Массажи</a></li>
+          <li><a href="services.html#care">Уходы за лицом</a></li>
+          <li><a href="services.html#peeling">Пилинги</a></li>
+          <li><a href="services.html#hardware">Аппаратная косметология</a></li>
+          <li><a href="services.html#injection">Инъекции</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+          <li><a href="mailto:hello@aura-studio.ru">hello@aura-studio.ru</a></li>
+          <li>Москва, ул. Малая Бронная, 14, стр. 2, офис 305</li>
+          <li>Пн–Сб 10:00–21:00, Вс 11:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2025</span> AURA — студия косметологии. Все права защищены.</span>
+      <span><a href="privacy.html">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn--light" href="tel:+79991234567">Позвонить</a>
+  <a class="btn btn--primary" href="booking.html">Записаться</a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
