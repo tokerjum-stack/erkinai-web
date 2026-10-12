@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Потолки Дома — натяжные потолки с калькулятором стоимости (демонстрационный макет)</title>
+<meta name="description" content="Демонстрационный макет сайта компании по установке натяжных потолков: калькулятор стоимости, этапы работы, ответы на вопросы.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#calc">Перейти к калькулятору</a>
+
+<header class="head">
+  <div class="wrap head-in">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <strong>Потолки Дома</strong>
+        <span class="brand-sub">установка натяжных потолков</span>
+      </span>
+    </div>
+    <div class="head-contact">
+      <a class="phone" href="tel:+79000000000">+7 (900) 000-00-00</a>
+      <span class="head-hours">ежедневно, 9:00–20:00</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="tag">Демонстрационный макет</p>
+      <h1>Натяжные потолки: стоимость видно до звонка</h1>
+      <p class="lead">Мы ставим матовые, сатиновые и глянцевые потолки в квартирах и небольших офисах. Калькулятор ниже считает цену по вашим размерам и выбранным работам — каждая позиция видна отдельно, без «уточним по телефону».</p>
+      <ul class="hero-list">
+        <li>Цена собирается из площади, углов, светильников, обходов труб, демонтажа и вывоза мусора.</li>
+        <li>Замер делаем на объекте, до подписания договора.</li>
+        <li>Сроки, порядок оплаты и гарантия фиксируются в договоре.</li>
+      </ul>
+      <p class="hero-cta"><a class="btn btn-primary" href="#calc">Посчитать стоимость</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="calc">
+    <div class="wrap">
+      <h2>Калькулятор стоимости</h2>
+      <p class="section-lead">Меняйте параметры — итог пересчитывается сразу. Цены в макете примерные.</p>
+
+      <div class="calc-grid">
+
+        <form class="calc-form" id="calc-form" novalidate>
+          <div class="field">
+            <div class="field-head">
+              <label class="field-label" for="area-num">Площадь потолка</label>
+              <span class="field-value">
+                <input class="num" type="number" id="area-num" name="area" min="5" max="200" step="1" value="20" inputmode="numeric" autocomplete="off">
+                <span class="unit">м²</span>
+              </span>
+            </div>
+            <input class="range" type="range" id="area-range" min="5" max="200" step="1" value="20" aria-label="Площадь потолка, ползунок от 5 до 200 квадратных метров">
+            <p class="hint">от 5 до 200 м²</p>
+          </div>
+
+          <fieldset class="field">
+            <legend class="field-label">Тип полотна</legend>
+            <div class="types">
+              <label class="type">
+                <input type="radio" name="canvas" value="matte" checked>
+                <span class="type-body"><span class="type-name">Матовое</span><span class="type-price">900 ₽/м²</span></span>
+              </label>
+              <label class="type">
+                <input type="radio" name="canvas" value="satin">
+                <span class="type-body"><span class="type-name">Сатиновое</span><span class="type-price">1 050 ₽/м²</span></span>
+              </label>
+              <label class="type">
+                <input type="radio" name="canvas" value="gloss">
+                <span class="type-body"><span class="type-name">Глянцевое</span><span class="type-price">1 200 ₽/м²</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <div class="field-head">
+              <label class="field-label" for="corners-num">Количество углов</label>
+              <span class="field-value">
+                <input class="num" type="number" id="corners-num" name="corners" min="0" max="12" step="1" value="4" inputmode="numeric" autocomplete="off">
+                <span class="unit">шт</span>
+              </span>
+            </div>
+            <input class="range" type="range" id="corners-range" min="0" max="12" step="1" value="4" aria-label="Количество углов, ползунок от 0 до 12">
+            <p class="hint">каждый угол — 350 ₽</p>
+          </div>
+
+          <div class="field">
+            <div class="field-head">
+              <label class="field-label" for="lights-num">Светильники</label>
+              <span class="field-value">
+                <input class="num" type="number" id="lights-num" name="lights" min="0" max="30" step="1" value="6" inputmode="numeric" autocomplete="off">
+                <span class="unit">шт</span>
+              </span>
+            </div>
+            <input class="range" type="range" id="lights-range" min="0" max="30" step="1" value="6" aria-label="Количество светильников, ползунок от 0 до 30">
+            <p class="hint">подготовка точки под светильник — 450 ₽</p>
+          </div>
+
+          <div class="field">
+            <div class="field-head">
+              <label class="field-label" for="pipes-num">Обход трубы</label>
+              <span class="field-value">
+                <input class="num" type="number" id="pipes-num" name="pipes" min="0" max="6" step="1" value="0" inputmode="numeric" autocomplete="off">
+                <span class="unit">шт</span>
+              </span>
+            </div>
+            <input class="range" type="range" id="pipes-range" min="0" max="6" step="1" value="0" aria-label="Количество обходов труб, ползунок от 0 до 6">
+            <p class="hint">обход одной трубы — 500 ₽</p>
+          </div>
+
+          <fieldset class="field">
+            <legend class="field-label">Дополнительные работы</legend>
+            <label class="check">
+              <input type="checkbox" id="demontage" name="demontage">
+              <span class="check-text">Демонтаж старого потолка <span class="check-price">250 ₽/м²</span></span>
+            </label>
+            <label class="check">
+              <input type="checkbox" id="trash" name="trash">
+              <span class="check-text">Вывоз мусора <span class="check-price">2 500 ₽</span></span>
+            </label>
+          </fieldset>
+        </form>
+
+        <aside class="calc-result" aria-labelledby="result-title">
+          <h3 class="result-title" id="result-title">Расчёт по вашим параметрам</h3>
+
+          <ul class="lines" id="calc-lines"></ul>
+
+          <div class="total">
+            <span class="total-label">Итого</span>
+            <output class="total-value" id="total-value" data-total="0" aria-live="polite">0 ₽</output>
+          </div>
+
+          <p class="area-note" id="area-note" hidden>Площадь не указана, поэтому полотно и демонтаж в расчёт не входят. Впишите площадь, чтобы увидеть полную стоимость.</p>
+
+          <p class="total-note">Это ориентировочная стоимость по примерным ценам демонстрационного макета. Точную сумму называем после замера, до начала работ.</p>
+
+          <div class="actions">
+            <a class="btn btn-primary wa-link" id="wa-link" data-wa href="https://wa.me/79000000000" target="_blank" rel="noopener">Отправить расчёт в WhatsApp</a>
+            <button class="btn btn-ghost" type="button" id="reset">Сбросить</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how">
+    <div class="wrap">
+      <h2>Как мы работаем</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Заявка и разговор</h3>
+          <p>Вы звоните или пишете в WhatsApp. Уточняем, сколько комнат, какая площадь и что уже есть на потолке.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Замер на объекте</h3>
+          <p>Приезжаем, измеряем помещение, смотрим углы, трубы и точки под свет. Уточняем, какие светильники вы хотите.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Расчёт и договор</h3>
+          <p>Показываем расчёт по позициям, согласуем дату и подписываем договор. В нём же — сроки, оплата и гарантия.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <h3>Монтаж и уборка</h3>
+          <p>Ставим потолок, подключаем светильники, убираем за собой мусор. Если нужен вывоз — забираем его с собой.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <h2>Вопросы и ответы</h2>
+      <div class="faq">
+        <details class="qa">
+          <summary>Что входит в расчёт калькулятора?</summary>
+          <p>Полотно по площади, обработка углов, подготовка точек под светильники, обходы труб, демонтаж старого потолка и вывоз мусора. Всё это видно отдельными строками, поэтому понятно, из чего складывается сумма.</p>
+        </details>
+        <details class="qa">
+          <summary>Насколько точна цена из калькулятора?</summary>
+          <p>Это ориентир по примерным ценам: он нужен, чтобы понять порядок суммы. Точную стоимость называем после замера — она зависит от состояния потолка, количества стыков полотна и выбранной фурнитуры.</p>
+        </details>
+        <details class="qa">
+          <summary>Сколько времени занимает монтаж?</summary>
+          <p>Одна комната площадью до 25 м² обычно делается за один рабочий день. Точный срок согласуем после замера и запишем в договор.</p>
+        </details>
+        <details class="qa">
+          <summary>Можно ли обойти трубы и поставить светильники?</summary>
+          <p>Да. В расчёте есть отдельные позиции под обход труб и подготовку точек под светильники. Количество выбираете сами: от 0 до 6 обходов и от 0 до 30 светильников.</p>
+        </details>
+        <details class="qa">
+          <summary>Нужно ли выносить мебель?</summary>
+          <p>Обычно достаточно освободить место под монтаж и убрать хрупкие вещи. Мебель можно накрыть плёнкой — это уточняем на замере и при необходимости включаем в план работ.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contacts">
+    <div class="wrap">
+      <h2>Контакты</h2>
+      <div class="contacts">
+        <div class="contact-card">
+          <p class="contact-label">Телефон</p>
+          <p class="contact-value"><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+        </div>
+        <div class="contact-card">
+          <p class="contact-label">WhatsApp</p>
+          <p class="contact-value"><a class="wa-link" data-wa href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a></p>
+        </div>
+        <div class="contact-card">
+          <p class="contact-label">Часы работы</p>
+          <p class="contact-value">Ежедневно, 9:00–20:00</p>
+        </div>
+      </div>
+      <p class="note">Телефон, часы работы и остальные контакты на этой странице условные: сайт сделан как демонстрационный макет и не является страницей реальной компании.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">Потолки Дома</p>
+      <p class="foot-demo"><strong>Демонстрационный макет.</strong> Компания, цены и контакты вымышлены. Информация на странице не является публичной офертой, рекламным обещанием или гарантией результата.</p>
+    </div>
+    <p class="foot-contact"><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+  </div>
+</footer>
+
+<div class="mobile-bar" id="mobile-bar" hidden>
+  <div class="mobile-bar-sum">
+    <span class="mobile-bar-label">Итого</span>
+    <strong class="mobile-bar-value" id="mobile-total">0 ₽</strong>
+  </div>
+  <a class="btn btn-primary wa-link" data-wa href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
