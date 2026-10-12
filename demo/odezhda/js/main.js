@@ -197,6 +197,9 @@
     var cartSum = $('#cart-sum');
     var fab = $('#cart-fab');
     var fabCount = $('#cart-count');
+    /* кнопка корзины в шапке магазина (блок 00-head с site.shopHead) */
+    var headCart = $('#head-cart');
+    var headCount = $('#head-cart-count');
     var backdrop = $('#cart-backdrop');
     var errEl = $('#cart-err');
     var addrWrap = $('#cart-addr-wrap');
@@ -232,6 +235,10 @@
       if (fabCount) {
         fabCount.textContent = n;
         fabCount.classList.toggle('is-on', n > 0);
+      }
+      if (headCount) {
+        headCount.textContent = n;
+        headCount.classList.toggle('is-on', n > 0);
       }
       if (cartEmpty) cartEmpty.style.display = cartItems.length ? 'none' : '';
       if (cartFoot) cartFoot.hidden = cartItems.length === 0;
@@ -294,6 +301,7 @@
     });
 
     if (fab) fab.addEventListener('click', openCart);
+    if (headCart) headCart.addEventListener('click', openCart);
     if (backdrop) backdrop.addEventListener('click', closeCart);
     var closeBtn = $('#cart-close');
     if (closeBtn) closeBtn.addEventListener('click', closeCart);
@@ -383,9 +391,138 @@
       var target = document.getElementById(id.slice(1));
       if (!target) return;
       e.preventDefault();
-      var top = target.getBoundingClientRect().top + window.pageYOffset - 78;
+      /* у шапки магазина две строки — отступ больше */
+      var offset = document.querySelector('.site-head--shop') ? 136 : 78;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: top, behavior: 'smooth' });
       history.replaceState(null, '', id);
     });
   });
+
+  /* ---------- 11. Магазин: поиск по подборкам и каталогу ----------
+     Поиск есть только у сайтов с полем поиска в шапке (site.shopHead).
+     Он фильтрует карточки подборок и строки каталога, прячет пустые
+     разделы и показывает, сколько моделей нашлось. */
+  var searchInput = $('#head-search-input');
+  if (searchInput) {
+    var searchForm = $('#head-search');
+    var searchReset = $('#head-search-reset');
+    var searchStatus = $('#search-status');
+    var gridCards = $$('.pgrid__card');
+    var priceRows = $$('.price-row');
+    var panels = $$('.menu-panel');
+    var menuSect = $('#menu');
+    var pgridSects = $$('.pgrid-sect');
+
+    var low = function (s) {
+      return String(s === null || s === undefined ? '' : s).toLowerCase().replace(/ё/g, 'е');
+    };
+    var statusText = function (name) {
+      return searchStatus ? (searchStatus.getAttribute(name) || '') : '';
+    };
+    var setStatus = function (text) {
+      if (!searchStatus) return;
+      searchStatus.textContent = text;
+      searchStatus.hidden = !text;
+    };
+
+    var resetSearch = function () {
+      gridCards.forEach(function (c) { c.hidden = false; });
+      priceRows.forEach(function (r) { r.hidden = false; });
+      panels.forEach(function (p) { p.hidden = false; });
+      pgridSects.forEach(function (s) { s.hidden = false; });
+      if (menuSect) menuSect.classList.remove('is-search');
+      if (searchReset) searchReset.hidden = true;
+      setStatus('');
+    };
+
+    var runSearch = function () {
+      var term = low(searchInput.value).trim();
+      if (!term) { resetSearch(); return; }
+      if (searchReset) searchReset.hidden = false;
+      if (menuSect) menuSect.classList.add('is-search');
+
+      var found = 0;
+      gridCards.forEach(function (c) {
+        var hit = low(c.getAttribute('data-name')).indexOf(term) !== -1;
+        c.hidden = !hit;
+        if (hit) found++;
+      });
+      /* первую подборку не прячем: в ней стоит строка с результатом */
+      pgridSects.forEach(function (s, i) {
+        if (i > 0) s.hidden = !s.querySelector('.pgrid__card:not([hidden])');
+      });
+
+      priceRows.forEach(function (r) {
+        var hit = low(r.textContent).indexOf(term) !== -1;
+        r.hidden = !hit;
+        if (hit) found++;
+      });
+      panels.forEach(function (p) {
+        p.hidden = !p.querySelector('.price-row:not([hidden])');
+      });
+
+      if (found) setStatus(statusText('data-found') + found);
+      else setStatus(statusText('data-empty'));
+    };
+
+    searchInput.addEventListener('input', runSearch);
+    if (searchForm) {
+      searchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        runSearch();
+        var target = null;
+        pgridSects.forEach(function (s) { if (!target && !s.hidden) target = s; });
+        if (!target) target = menuSect;
+        if (!target) return;
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.pageYOffset - 136,
+          behavior: 'smooth'
+        });
+      });
+    }
+    if (searchReset) {
+      searchReset.addEventListener('click', function () {
+        searchInput.value = '';
+        resetSearch();
+        searchInput.focus();
+      });
+    }
+    /* гость выбрал раздел в каталоге — поиск больше не нужен */
+    $$('.tab').forEach(function (t) {
+      t.addEventListener('click', function () {
+        if (searchInput.value) { searchInput.value = ''; resetSearch(); }
+      });
+    });
+  }
+
+  /* ---------- 12. Плитка категории открывает свой раздел каталога ---------- */
+  $$('[data-cat]').forEach(function (tile) {
+    tile.addEventListener('click', function () {
+      var tab = $('.tab[data-tab="' + tile.getAttribute('data-cat') + '"]');
+      if (tab) tab.click();
+    });
+  });
+
+  /* ---------- 13. Подписка на новинки (форма демо-макета) ----------
+     Форма ничего не отправляет: у сайта пока нет рассылки, и об этом
+     прямо написано в блоке. Тексты сообщений берём из JSON. */
+  var subForm = $('#sub-form');
+  if (subForm) {
+    var subMsg = $('#sub-msg');
+    var subSay = function (text, bad) {
+      if (!subMsg) return;
+      subMsg.textContent = text;
+      subMsg.className = bad ? 'sub__msg is-bad' : 'sub__msg';
+    };
+    subForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var mail = ($('#sub-email') || {}).value || '';
+      var at = mail.indexOf('@');
+      var good = at > 0 && mail.indexOf('.', at) > 0 && mail.indexOf(' ') === -1;
+      if (!good) { subSay(subForm.getAttribute('data-bad') || '', true); return; }
+      subSay(subForm.getAttribute('data-ok') || '', false);
+      subForm.reset();
+    });
+  }
 })();
