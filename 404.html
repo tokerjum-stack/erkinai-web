@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — Эркинай</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#faf7f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f8a6d'/%3E%3Cpath d='M20 44V20h20v5H26v4h12v5H26v5h14v5z' fill='%23faf7f1'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --sage: #4f8a6d;
+    --sage-deep: #3c6b54;
+    --sage-soft: #e7f3ec;
+    --cream: #faf7f1;
+    --ink: #2c3a33;
+    --muted: #66766d;
+    --line: #e4ece6;
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 22px 40px;
+    flex: 1 0 auto;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; margin-bottom: 44px; }
+  .brand__name { font-family: var(--font-display); font-size: 1.35rem; color: var(--ink); line-height: 1.1; }
+  .brand__sub { display: block; font-size: .78rem; color: var(--muted); letter-spacing: .04em; }
+
+  .code {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 16vw, 7rem);
+    line-height: 1;
+    color: var(--sage-soft);
+    letter-spacing: -.03em;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
+    line-height: 1.2;
+    margin: 6px 0 14px;
+  }
+  .lead { color: var(--muted); font-size: 1.05rem; max-width: 60ch; margin-bottom: 32px; }
+
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 600; font-size: .98rem;
+    padding: 14px 26px; border-radius: 100px; background: var(--sage); color: #fff;
+    transition: background .16s ease;
+  }
+  .btn:hover { background: var(--sage-deep); }
+  .btn--ghost { background: transparent; color: var(--sage-deep); border: 1.5px solid var(--sage); }
+  .btn--ghost:hover { background: var(--sage-soft); }
+
+  .links { border-top: 1px solid var(--line); padding-top: 26px; }
+  .links h2 {
+    font-size: .76rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--sage); font-weight: 700; margin-bottom: 14px;
+  }
+  .links ul { list-style: none; display: grid; gap: 10px; }
+  .links a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+  .links a:hover { border-bottom-color: var(--sage); }
+  .links span { color: var(--muted); font-size: .92rem; }
+
+  footer {
+    flex: 0 0 auto; text-align: center; color: var(--muted);
+    font-size: .88rem; padding: 26px 22px 34px; border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--sage-deep); }
+  @media (max-width: 480px) {
+    .wrap { padding: 44px 20px 30px; }
+    .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="brand" href="https://erkinai.ru/">
+    <svg width="40" height="40" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <rect width="64" height="64" rx="14" fill="#4F8A6D"/>
+      <path d="M20 44V20h20v5H26v4h12v5H26v5h14v5z" fill="#FAF7F1"/>
+    </svg>
+    <span>
+      <span class="brand__name">Эркинай</span>
+      <span class="brand__sub">создание сайтов</span>
+    </span>
+  </a>
+
+  <div class="code">404</div>
+  <h1>Такой страницы здесь нет</h1>
+  <p class="lead">
+    Возможно, ссылка набрана с ошибкой или в адресе другие буквы — заглавные
+    и строчные в адресах различаются. Загляните в портфолио: там все работы
+    и примеры, каждый открывается с телефона.
+  </p>
+
+  <div class="btns">
+    <a class="btn" href="https://erkinai.ru/portfolio.html">Посмотреть работы</a>
+    <a class="btn btn--ghost" href="https://wa.me/79218202007" target="_blank" rel="noopener">Написать в WhatsApp</a>
+  </div>
+
+  <div class="links">
+    <h2>Куда ещё можно пойти</h2>
+    <ul>
+      <li><a href="https://erkinai.ru/">Главная</a> <span>— что я делаю и сколько это стоит</span></li>
+      <li><a href="https://erkinai.ru/portfolio.html">Портфолио</a> <span>— 13 примеров для разных сфер</span></li>
+      <li><a href="https://erkinai.ru/sajt-dlya-kafe.html">Сайт для кафе</a> <span>— отдельная страница про кафе и кофейни</span></li>
+      <li><a href="https://erkinai.ru/most.html">Мост</a> <span>— разбор запутанных ситуаций</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="y">2026</span> Эркинай — создание сайтов · <a href="https://erkinai.ru/">erkinai.ru</a>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+</body>
+</html>
