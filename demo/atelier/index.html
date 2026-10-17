@@ -275,6 +275,16 @@
           <p class="field__error" id="e-day" hidden>Выберите удобный день или вариант «Выберу день позже».</p>
         </div>
 
+        <div class="field field--consent">
+          <label class="consent" for="f-consent">
+            <input class="consent__input" type="checkbox" id="f-consent" name="consent" aria-describedby="e-consent">
+            <span class="consent__text">Согласен на обработку персональных данных в соответствии
+              с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.
+              Данные уйдут в WhatsApp только после того, как я сам нажму «отправить».</span>
+          </label>
+          <p class="field__error" id="e-consent" hidden>Поставьте галочку — без согласия форма не отправится.</p>
+        </div>
+
         <div class="form__actions">
           <button class="btn btn--primary" type="submit" id="form-submit">Отправить в WhatsApp</button>
         </div>
@@ -304,7 +314,8 @@
         <strong>Это демонстрационный макет.</strong> Название ателье, образы, ткани, сроки и контакты — примерные: страница показывает только структуру сайта.
         Страница закрыта от индексации, форма ничего не отправляет на сервер — она собирает текст и открывает WhatsApp.
       </p>
-      <p class="site-foot__text site-foot__meta">Разделы: <a href="#manifest">Манифест</a>, <a href="#collection">Коллекция</a>, <a href="#process">Процесс</a>, <a href="#fabrics">Ткани</a>, <a href="#booking">Запись на примерку</a>.</p>
+      <p class="site-foot__text site-foot__meta">Разделы: <a href="#manifest">Манифест</a>, <a href="#collection">Коллекция</a>, <a href="#process">Процесс</a>, <a href="#fabrics">Ткани</a>, <a href="#booking">Запись на примерку</a>.
+        Документы: <a href="privacy.html">Политика обработки персональных данных</a>.</p>
     </div>
   </div>
 </footer>

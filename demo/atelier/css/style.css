@@ -551,6 +551,23 @@ main:focus { outline: none; }
 .field__input[aria-invalid="true"] { border-color: var(--clay-deep); }
 .field__error { max-width: 46ch; color: var(--clay-deep); font-size: var(--t-sm); }
 
+/* Согласие на обработку персональных данных */
+.field--consent { margin-top: calc(var(--s-2) * -1); }
+.consent {
+  display: flex; align-items: flex-start; gap: 12px;
+  cursor: pointer; color: var(--ink-soft);
+  font-size: var(--t-sm); line-height: 1.55; max-width: 60ch;
+}
+.consent__input {
+  flex: 0 0 auto;
+  inline-size: 24px; block-size: 24px;
+  margin: 0;
+  accent-color: var(--clay);
+  cursor: pointer;
+}
+.consent__input[aria-invalid="true"] { outline: 2px solid var(--clay-deep); outline-offset: 2px; }
+.consent__text a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; }
+
 .form__actions { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
 .form__status { max-width: 46ch; color: var(--ink-soft); font-size: var(--t-sm); }
 .form__status:empty { display: none; }

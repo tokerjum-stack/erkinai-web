@@ -156,6 +156,7 @@
     var phoneInput = document.getElementById('f-phone');
     var taskInput = document.getElementById('f-task');
     var dayInput = document.getElementById('f-day');
+    var consentInput = document.getElementById('f-consent');
 
     // Приводим телефон к виду +7 (900) 000-00-00; null — номер неверный
     function normalizePhone(raw) {
@@ -175,6 +176,7 @@
       if (el === phoneInput) return normalizePhone(value) !== null;
       if (el === taskInput) return value.length >= 3;
       if (el === dayInput) return value !== '';
+      if (el === consentInput) return !!el.checked;
       return true;
     }
 
@@ -197,7 +199,7 @@
       status.classList.toggle('is-error', !!isError);
     }
 
-    [nameInput, phoneInput, taskInput, dayInput].forEach(function (el) {
+    [nameInput, phoneInput, taskInput, dayInput, consentInput].forEach(function (el) {
       if (!el) return;
       var eventName = el.tagName === 'SELECT' ? 'change' : 'input';
       el.addEventListener(eventName, function () {
@@ -212,7 +214,7 @@
       event.preventDefault();
       if (result) result.hidden = true;
 
-      var fields = [nameInput, phoneInput, taskInput, dayInput];
+      var fields = [nameInput, phoneInput, taskInput, dayInput, consentInput];
       var bad = fields.filter(function (el) { return el && !validate(el); });
 
       if (bad.length) {
@@ -230,7 +232,8 @@
         'Имя: ' + name + '\n' +
         'Телефон: ' + phone + '\n' +
         'Что сшить: ' + task + '\n' +
-        'Удобный день: ' + day;
+        'Удобный день: ' + day + '\n' +
+        'Согласие на обработку персональных данных: да';
 
       var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 

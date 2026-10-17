@@ -481,9 +481,50 @@
             <textarea id="erkNote" name="note" placeholder="Можете коротко написать, что вас беспокоит, или оставить пустым"></textarea>
           </div>
 
+          <style>
+            .consent-line{display:flex;gap:10px;align-items:flex-start;max-width:54ch;margin:2px 0 6px;font-size:.9rem;line-height:1.5}
+            .consent-line input[type="checkbox"]{flex:0 0 auto;width:22px;height:22px;margin:2px 0 0;accent-color:#4f8a6d;cursor:pointer}
+            .consent-line label{flex:1 1 auto;cursor:pointer}
+            .consent-line a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+            .consent-err{color:#a33a2f;font-size:.85rem;margin:0 0 10px;max-width:54ch}
+            .consent-line input[aria-invalid="true"]{outline:2px solid #a33a2f;outline-offset:2px}
+          </style>
+          <div class="consent-line">
+            <input type="checkbox" id="erkConsent" name="consent" aria-describedby="erkConsentErr">
+            <label for="erkConsent">Согласен на обработку персональных данных в соответствии
+              с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</label>
+          </div>
+          <p class="consent-err" id="erkConsentErr" hidden>Поставьте галочку — без согласия сообщение не подготовится.</p>
+
           <button class="btn btn-primary btn-block" type="submit">Подготовить сообщение</button>
           <p class="hint">Данные никуда не отправляются и не сохраняются — текст формируется прямо в вашем браузере.</p>
         </form>
+
+        <script>
+        /* Согласие на обработку данных: без галочки форма не работает.
+           Перехватываем отправку раньше обработчиков страницы. */
+        (function () {
+          var form = document.getElementById('erkForm');
+          var box = document.getElementById('erkConsent');
+          var err = document.getElementById('erkConsentErr');
+          if (!form || !box) return;
+          form.addEventListener('submit', function (e) {
+            if (!box.checked) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              if (err) err.hidden = false;
+              box.setAttribute('aria-invalid', 'true');
+              box.focus();
+            }
+          }, true);
+          box.addEventListener('change', function () {
+            if (box.checked) {
+              if (err) err.hidden = true;
+              box.removeAttribute('aria-invalid');
+            }
+          });
+        })();
+        </script>
 
         <div class="result" id="erkResult">
           <h4>Сообщение готово</h4>
