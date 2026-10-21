@@ -80,6 +80,11 @@
       "@type": "Question",
       "name": "Вы гарантируете, что сайт выйдет в топ Яндекса?",
       "acceptedAnswer": { "@type": "Answer", "text": "Нет, и никто честно не может это гарантировать. Я делаю техническую часть: чтобы сайт был правильно устроен, быстро грузился на телефоне и был понятен Яндексу. Это фундамент, без которого продвижение не работает." }
+    },
+    {
+      "@type": "Question",
+      "name": "Что делать после запуска, чтобы пошли клиенты?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Три пути по порядку. Первый и самый важный — карточка в Яндекс Картах: для кафе, салонов и мастеров работает лучше всего, потому что люди ищут рядом с собой именно в Картах; заполнение целиком и показ, как просить отзывы — 5000 рублей разово. Второй — статьи на сайте: первый результат через три-четыре месяца, зато бесплатно и работает годами, одна статья 3000 рублей. Третий — реклама в Яндексе: клиенты приходят сразу, но только пока вы платите." }
     }
   ]
 }
@@ -120,9 +125,9 @@
 
     <nav class="nav" id="site-nav" aria-label="Основная навигация">
       <a class="nav__link" href="#services">Услуги</a>
+      <a class="nav__link" href="#portfolio">Работы</a>
       <a class="nav__link" href="#prices">Цены</a>
-      <a class="nav__link" href="#portfolio">Примеры</a>
-      <a class="nav__link" href="#process">Как работаю</a>
+      <a class="nav__link" href="#about">Обо мне</a>
       <a class="nav__link" href="#faq">Вопросы</a>
       <a class="nav__link" href="#contact">Контакты</a>
       <a class="btn btn--block" href="#contact">Обсудить мой проект</a>
@@ -227,7 +232,331 @@
     </div>
   </section>
 
-  <!-- ================= ЦЕНЫ ================= -->
+  
+  <!-- ================= РАБОТЫ ================= -->
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Работы</div>
+          <h2>Что уже<br>сделано</h2>
+        </div>
+        <p>Откройте с телефона — так сразу видно, как страница поведёт себя у ваших клиентов. Ниже настоящие сайты, а в конце — концепции оформления.</p>
+      </div>
+
+      <div class="works">
+        <article class="work">
+          <div class="work__cover">
+            <span class="work__badge work__badge--real">Реальный заказчик</span>
+            <img src="img/work-english.jpg" alt="Сайт репетитора английского: первый экран с заголовком и кнопками" width="1000" height="570" decoding="async">
+          </div>
+          <div class="work__body">
+            <h3>Сайт репетитора английского</h3>
+            <p>Программы занятий, цены, отзывы учеников и видео о занятиях. Заявка готовит сообщение и открывает WhatsApp — клиенту остаётся нажать «отправить».</p>
+            <div class="tags">
+              <span class="tag">Реальный клиент</span>
+              <span class="tag">Форма заявки</span>
+              <span class="tag">Отзывы</span>
+            </div>
+            <a class="work__link" href="https://erkinai.ru/works/english-tutor/" target="_blank" rel="noopener">Смотреть сайт <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__cover">
+            <span class="work__badge work__badge--real">Мой сайт</span>
+            <img src="img/work-vizitka.jpg" alt="Личная визитка: первый экран с мягким дизайном" width="1000" height="570" decoding="async">
+          </div>
+          <div class="work__body">
+            <h3>Личная визитка</h3>
+            <p>Мой собственный сайт: спокойный дизайн, разговор с посетителем прямо на странице, форма обращения, которая собирает текст сообщения.</p>
+            <div class="tags">
+              <span class="tag">Личный проект</span>
+              <span class="tag">Форма обращения</span>
+              <span class="tag">Адаптив</span>
+            </div>
+            <a class="work__link" href="https://erkinai.ru/works/vizitka-erkinai/" target="_blank" rel="noopener">Смотреть сайт <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__cover">
+            <span class="work__badge">Демо-макет</span>
+            <img src="img/work-aura.jpg" alt="Многостраничный сайт студии косметологии: первый экран" width="1000" height="570" decoding="async">
+          </div>
+          <div class="work__body">
+            <h3>Студия косметологии, 8 страниц</h3>
+            <p>Услуги с ценами, витрина косметики, прайс, онлайн-запись с проверкой полей. Студия и мастера вымышленные — это демонстрационный кейс.</p>
+            <div class="tags">
+              <span class="tag">8 страниц</span>
+              <span class="tag">Форма записи</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Адаптив</span>
+            </div>
+            <a class="work__link" href="https://erkinai.ru/works/kosmetolog-studio/" target="_blank" rel="noopener">Смотреть макет <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__cover">
+            <span class="work__badge">Демо-макет</span>
+            <img src="img/work-odezhda.jpg" alt="Магазин женской одежды: каталог с корзиной" width="1000" height="570" decoding="async">
+          </div>
+          <div class="work__body">
+            <h3>Магазин одежды с корзиной</h3>
+            <p>Каталог из 30 товаров по разделам: фото, состав, размеры, цены. Корзина собирает заказ и отправляет его в WhatsApp одним сообщением.</p>
+            <div class="tags">
+              <span class="tag">Каталог и корзина</span>
+              <span class="tag">Размеры</span>
+              <span class="tag">Заказ в WhatsApp</span>
+            </div>
+            <a class="work__link" href="https://erkinai.ru/demo/odezhda/" target="_blank" rel="noopener">Смотреть макет <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="concepts">
+        <div class="concepts__head">
+          <h3>Концепции оформления</h3>
+          <p>Выдуманные бренды — примеры визуального направления для кафе, салонов и доставки. Это не клиентские проекты.</p>
+        </div>
+
+        <div class="showcase showcase--three">
+          <article class="project">
+            <div class="project__visual project__visual--cafe">
+              <div class="mock-window">
+                <div class="mock-top"><span>LEAF &amp; BEAN</span><span>МЕНЮ · О НАС · КОНТАКТЫ</span></div>
+                <div class="mock-title">Место, куда хочется вернуться.</div>
+                <div class="mock-sub">Кофе, свежая выпечка и спокойные утра.</div>
+                <span class="mock-pill">СМОТРЕТЬ МЕНЮ ↗</span>
+                <div class="mock-photo"></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <div>
+                <h3>Для кафе и ресторанов</h3>
+                <p>Меню · Атмосфера · Контакты</p>
+              </div>
+              <div class="project__arrow" aria-hidden="true">↗</div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__visual project__visual--beauty">
+              <div class="mock-window">
+                <div class="mock-top"><span>STUDIO ÉLAN</span><span>УСЛУГИ · МАСТЕРА</span></div>
+                <div class="mock-title">Время для себя.</div>
+                <div class="mock-sub">Забота о красоте в деталях.</div>
+                <span class="mock-pill">ВЫБРАТЬ УСЛУГУ ↗</span>
+                <div class="mock-photo"></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <div>
+                <h3>Для салонов и мастеров</h3>
+                <p>Услуги · Прайс · Запись</p>
+              </div>
+              <div class="project__arrow" aria-hidden="true">↗</div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__visual project__visual--food">
+              <div class="mock-window">
+                <div class="mock-top"><span>ТЁПЛЫЙ ДОМ</span><span>МЕНЮ · ДОСТАВКА</span></div>
+                <div class="mock-title">Домашняя кухня рядом.</div>
+                <div class="mock-sub">Свежее меню и заказ в одно касание.</div>
+                <span class="mock-pill">СМОТРЕТЬ МЕНЮ ↗</span>
+                <div class="mock-photo"></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <div>
+                <h3>Для доставки и кухни</h3>
+                <p>Меню · Заказ · WhatsApp</p>
+              </div>
+              <div class="project__arrow" aria-hidden="true">↗</div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="showcase__note">
+        Больше примеров — в
+        <a href="https://erkinai.ru/portfolio.html" target="_blank" rel="noopener">портфолио</a>
+        и <a href="https://erkinai.ru/demo/" target="_blank" rel="noopener">каталоге макетов</a>.
+      </p>
+    </div>
+  </section>
+
+<!-- ================= ПРЕИМУЩЕСТВА ================= -->
+  <section class="section">
+    <div class="wrap features">
+      <div class="feature-copy">
+        <div class="kicker">Продумано для людей</div>
+        <h2>Сначала удобно. Потом красиво. Лучше — сразу всё.</h2>
+        <p>Большинство клиентов открывают сайт с телефона. Поэтому важные сведения, цены и кнопки связи должны быть заметны, а не спрятаны в глубине страницы.</p>
+        <div class="checklist">
+          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Адаптация под телефон</b><br>Текст читается, кнопки удобно нажимать.</span></div>
+          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Понятная структура</b><br>Клиент быстро находит услугу, цену и контакты.</span></div>
+          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Домен на ваше имя</b><br>Домен оформляется на заказчика; сайт передаётся по согласованным условиям.</span></div>
+          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Без сюрпризов</b><br>Сначала согласуем макет и объём работ, затем начинаем разработку.</span></div>
+        </div>
+      </div>
+
+      <div class="feature-panel">
+        <h3>Ваш сайт должен работать на ваш бизнес.</h3>
+        <div class="mini-site">
+          <div class="mini-site__top"><b>YOUR BRAND</b><span>МЕНЮ ☰</span></div>
+          <h4>Всё нужное — в одном месте.</h4>
+          <p>Услуги, цены и быстрый способ связаться с вами.</p>
+          <div class="mini-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ================= КОМУ ПОДОЙДУТ ================= -->
+  <section class="section" id="fit">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Кому подойдёт</div>
+          <h2>Мои сайты<br>подойдут не всем</h2>
+        </div>
+        <p>Честно скажу сразу, кому помогу, а с кем только потратим время друг друга. Так лучше и вам, и мне.</p>
+      </div>
+
+      <div class="fit">
+        <div class="fit__col fit__col--yes">
+          <h3><span class="fit__sign" aria-hidden="true">✓</span>Подойдёт, если…</h3>
+          <p>Это мои обычные заказчики</p>
+          <ul class="fit-list fit-list--yes">
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✓</span>
+              <span><b>У вас небольшое дело</b> — кафе, салон, мастер, репетитор, автосервис, магазин, услуги для дома</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✓</span>
+              <span><b>Нужен сайт на 1–8 страниц</b> с услугами, ценами, фотографиями и формой заявки</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✓</span>
+              <span><b>Ваши клиенты ищут вас в Яндексе</b> — по названию, по району, по услуге</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✓</span>
+              <span><b>Бюджет от 10 000 ₽</b> — это минимальная стоимость нормального сайта</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✓</span>
+              <span><b>Готовы дать материалы</b> — фотографии, цены, описание услуг. Тексты напишу я</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="fit__col fit__col--no">
+          <h3><span class="fit__sign" aria-hidden="true">✕</span>Не подойдёт, если…</h3>
+          <p>Тут честно скажу, что это не ко мне</p>
+          <ul class="fit-list fit-list--no">
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✕</span>
+              <span><b>Нужен сайт за 3 000 ₽</b> — за эти деньги получается шаблон, который не работает</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✕</span>
+              <span><b>Нужна гарантия первого места в Яндексе</b> — этого не может обещать никто</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✕</span>
+              <span><b>Нужен большой интернет-магазин</b> с личным кабинетом и оплатой — это другая работа</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✕</span>
+              <span><b>Нужно мобильное приложение или сложный сервис</b> — я делаю сайты, а не программы</span>
+            </li>
+            <li>
+              <span class="fit-list__mark" aria-hidden="true">✕</span>
+              <span><b>Нужен совет, а не сайт</b> — подскажу бесплатно, работу не возьму</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spheres">
+        <span class="sphere">Кафе и рестораны</span>
+        <span class="sphere">Салоны красоты</span>
+        <span class="sphere">Мастера и специалисты</span>
+        <span class="sphere">Репетиторы и курсы</span>
+        <span class="sphere">Автосервисы</span>
+        <span class="sphere">Магазины</span>
+        <span class="sphere">Ремонт и услуги для дома</span>
+        <span class="sphere">Юристы и бухгалтеры</span>
+        <span class="sphere">Доставка еды</span>
+        <span class="sphere">Медицинские кабинеты</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= НЕ НАШЛИ СВОЮ СФЕРУ ================= -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="band">
+        <div class="band__text">
+          <h2>Не нашли свою сферу?</h2>
+          <p>Напишите, чем занимаетесь, — посмотрю и честно скажу, смогу ли помочь. Консультация бесплатная и ни к чему не обязывает.</p>
+        </div>
+        <div class="band__actions">
+          <a class="btn" href="#contact">Написать мне</a>
+          <a class="btn btn--light" href="https://wa.me/79218202007" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= КАК РАБОТАЮ ================= -->
+  <section class="section section--paper" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Понятный процесс</div>
+          <h2>Пять шагов<br>без сюрпризов</h2>
+        </div>
+        <p>Вы всегда знаете, на каком этапе проект и что будет дальше. Ничего не появляется «по ходу».</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step__num">01</div>
+          <h3>Заявка</h3>
+          <p>Вы пишете в WhatsApp или через форму. Обсуждаем задачу, задаю вопросы, предлагаю решение.</p>
+        </article>
+        <article class="step">
+          <div class="step__num">02</div>
+          <h3>Договорённость</h3>
+          <p>Фиксируем объём, сроки и цену письменно. Предоплата 50%.</p>
+        </article>
+        <article class="step">
+          <div class="step__num">03</div>
+          <h3>Работа</h3>
+          <p>Показываю макет и собираю сайт на своём адресе, чтобы вы видели процесс.</p>
+        </article>
+        <article class="step">
+          <div class="step__num">04</div>
+          <h3>Правки</h3>
+          <p>Два-три круга правок включены. Дальнейшие доработки — по договорённости.</p>
+        </article>
+        <article class="step">
+          <div class="step__num">05</div>
+          <h3>Передача</h3>
+          <p>Переношу на ваш домен, отдаю файлы и объясняю, как менять тексты и цены.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= ЦЕНЫ ================= -->
   <section class="section" id="prices">
     <div class="wrap">
       <div class="section-head">
@@ -274,156 +603,34 @@
     </div>
   </section>
 
-  <!-- ================= ПРИМЕРЫ ================= -->
-  <section class="section section--paper" id="portfolio">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Визуальное направление</div>
-          <h2>У каждого бизнеса<br>свой характер</h2>
-        </div>
-        <p>Ниже — концепции оформления. Это примеры визуального направления, а не готовые клиентские проекты.</p>
-      </div>
+  
+  <!-- ================= ОБО МНЕ ================= -->
+  <section class="section section--paper" id="about">
+    <div class="wrap about">
+      <div class="about__text">
+        <div class="kicker">Обо мне</div>
+        <h2>Меня зовут Эркинай</h2>
 
-      <div class="showcase showcase--three">
-        <article class="project">
-          <div class="project__visual project__visual--cafe">
-            <div class="mock-window">
-              <div class="mock-top"><span>LEAF &amp; BEAN</span><span>МЕНЮ · О НАС · КОНТАКТЫ</span></div>
-              <div class="mock-title">Место, куда хочется вернуться.</div>
-              <div class="mock-sub">Кофе, свежая выпечка и спокойные утра.</div>
-              <span class="mock-pill">СМОТРЕТЬ МЕНЮ ↗</span>
-              <div class="mock-photo"></div>
-            </div>
-          </div>
-          <div class="project__info">
-            <div>
-              <h3>Для кафе и ресторанов</h3>
-              <p>Меню · Атмосфера · Контакты</p>
-            </div>
-            <div class="project__arrow" aria-hidden="true">↗</div>
-          </div>
-        </article>
+        <p>Двадцать лет я проработала в продажах — и это оказалось лучшей школой для нынешней работы. Продажи научили главному: слышать человека и понимать, что ему нужно на самом деле, а не впаривать лишнее.</p>
 
-        <article class="project">
-          <div class="project__visual project__visual--beauty">
-            <div class="mock-window">
-              <div class="mock-top"><span>STUDIO ÉLAN</span><span>УСЛУГИ · МАСТЕРА</span></div>
-              <div class="mock-title">Время для себя.</div>
-              <div class="mock-sub">Забота о красоте в деталях.</div>
-              <span class="mock-pill">ВЫБРАТЬ УСЛУГУ ↗</span>
-              <div class="mock-photo"></div>
-            </div>
-          </div>
-          <div class="project__info">
-            <div>
-              <h3>Для салонов и мастеров</h3>
-              <p>Услуги · Прайс · Запись</p>
-            </div>
-            <div class="project__arrow" aria-hidden="true">↗</div>
-          </div>
-        </article>
+        <p>Поэтому со мной не бывает так, что «сделали красиво, а зачем — непонятно». Сначала спрашиваю, что должно происходить с сайтом: чтобы вам звонили, писали в WhatsApp, приходили по записи. Потом делаю.</p>
 
-        <article class="project">
-          <div class="project__visual project__visual--food">
-            <div class="mock-window">
-              <div class="mock-top"><span>ТЁПЛЫЙ ДОМ</span><span>МЕНЮ · ДОСТАВКА</span></div>
-              <div class="mock-title">Домашняя кухня рядом.</div>
-              <div class="mock-sub">Свежее меню и заказ в одно касание.</div>
-              <span class="mock-pill">СМОТРЕТЬ МЕНЮ ↗</span>
-              <div class="mock-photo"></div>
-            </div>
-          </div>
-          <div class="project__info">
-            <div>
-              <h3>Для доставки и кухни</h3>
-              <p>Меню · Заказ · WhatsApp</p>
-            </div>
-            <div class="project__arrow" aria-hidden="true">↗</div>
-          </div>
-        </article>
-      </div>
+        <p>Сайты — моё увлечение, которое стало работой. Мне нравится делать аккуратные и понятные сайты для небольших дел: чтобы вас находили в Яндексе, чтобы с телефона всё открывалось быстро и чтобы не пришлось переделывать через год.</p>
 
-      <p class="showcase__note">
-        Хотите посмотреть живые страницы целиком — откройте
-        <a href="https://erkinai.ru/demo/" target="_blank" rel="noopener">каталог макетов</a>
-        или <a href="https://erkinai.ru/portfolio.html" target="_blank" rel="noopener">портфолио</a>.
-      </p>
-    </div>
-  </section>
+        <p>Вне работы — психология, философия, саморазвитие. Отсюда привычка объяснять человеческим языком, без технического жаргона. Иногда ко мне приходят не за сайтом, а за разговором — об этом у меня <a href="https://erkinai.ru/most.html">отдельная страница</a>.</p>
 
-  <!-- ================= ПРЕИМУЩЕСТВА ================= -->
-  <section class="section">
-    <div class="wrap features">
-      <div class="feature-copy">
-        <div class="kicker">Продумано для людей</div>
-        <h2>Сначала удобно. Потом красиво. Лучше — сразу всё.</h2>
-        <p>Большинство клиентов открывают сайт с телефона. Поэтому важные сведения, цены и кнопки связи должны быть заметны, а не спрятаны в глубине страницы.</p>
-        <div class="checklist">
-          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Адаптация под телефон</b><br>Текст читается, кнопки удобно нажимать.</span></div>
-          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Понятная структура</b><br>Клиент быстро находит услугу, цену и контакты.</span></div>
-          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Домен на ваше имя</b><br>Домен оформляется на заказчика; сайт передаётся по согласованным условиям.</span></div>
-          <div class="check"><span class="check__mark" aria-hidden="true">✓</span><span><b>Без сюрпризов</b><br>Сначала согласуем макет и объём работ, затем начинаем разработку.</span></div>
+        <div class="about__actions">
+          <a class="btn" href="#contact">Написать мне</a>
+          <a class="btn btn--light" href="https://wa.me/79218202007" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
 
-      <div class="feature-panel">
-        <h3>Ваш сайт должен работать на ваш бизнес.</h3>
-        <div class="mini-site">
-          <div class="mini-site__top"><b>YOUR BRAND</b><span>МЕНЮ ☰</span></div>
-          <h4>Всё нужное — в одном месте.</h4>
-          <p>Услуги, цены и быстрый способ связаться с вами.</p>
-          <div class="mini-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="about__photo">
+        <img src="img/erkinai.jpg" alt="Эркинай — создание сайтов для малого бизнеса" width="900" height="1059" decoding="async">
+        <div class="about__quote">
+          <b>Как я работаю</b>
+          Тексты пишу сама, правки не считаю поштучно, на вопросы отвечаю в тот же день.
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= КАК РАБОТАЮ ================= -->
-  <section class="section section--paper" id="process">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Понятный процесс</div>
-          <h2>От первой идеи<br>до запуска сайта</h2>
-        </div>
-        <p>Вы понимаете, что происходит на каждом этапе, что входит в работу и когда ждать результат.</p>
-      </div>
-
-      <div class="steps">
-        <article class="step">
-          <div class="step__num">01</div>
-          <h3>Знакомимся</h3>
-          <p>Коротко обсуждаем бизнес, задачи, аудиторию и нужные функции.</p>
-        </article>
-        <article class="step">
-          <div class="step__num">02</div>
-          <h3>Согласуем макет</h3>
-          <p>Показываю концепцию и ссылку на макет до начала основной работы.</p>
-        </article>
-        <article class="step">
-          <div class="step__num">03</div>
-          <h3>Создаю сайт</h3>
-          <p>После согласования условий и предоплаты собираю страницу и наполнение.</p>
-        </article>
-        <article class="step">
-          <div class="step__num">04</div>
-          <h3>Проверяем и запускаем</h3>
-          <p>Проверяем мобильную версию, ссылки и формы. Ориентир по сроку — около 5 рабочих дней для небольшого сайта.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ПРИЗЫВ ================= -->
-  <section class="cta-section">
-    <div class="wrap">
-      <div class="cta-box">
-        <div>
-          <h2>Расскажите о своём деле. Найдём подходящее решение.</h2>
-          <p>Даже если пока есть только идея — начнём с неё.</p>
-        </div>
-        <a class="btn" href="#contact">Оставить заявку <span class="btn__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
@@ -434,7 +641,7 @@
       <div class="section-head">
         <div>
           <div class="kicker">Частые вопросы</div>
-          <h2>Что обычно спрашивают</h2>
+          <h2>Что обычно<br>спрашивают</h2>
         </div>
         <p>Если вашего вопроса здесь нет — напишите, отвечу лично.</p>
       </div>
@@ -464,6 +671,25 @@
           <summary>Вы гарантируете, что сайт выйдет в топ Яндекса?</summary>
           <p>Нет, и никто честно не может это гарантировать — поиск зависит от многих факторов. Я делаю техническую часть: чтобы сайт был правильно устроен, быстро грузился на телефоне и был понятен Яндексу. Это фундамент, без которого продвижение не работает вообще.</p>
         </details>
+        <details>
+          <summary>Что делать после запуска, чтобы пошли клиенты?</summary>
+          <p>Есть три пути по порядку. Первый и самый важный — карточка в Яндекс Картах: это бесплатно и для кафе, салонов и мастеров работает лучше всего, потому что люди ищут рядом с собой именно в Картах. Заполняю карточку целиком и показываю, как просить отзывы — 5 000 ₽ разово.</p>
+          <p>Второй — статьи на сайте: первый результат через три-четыре месяца, зато бесплатно и работает годами. Одна статья — 3 000 ₽.</p>
+          <p>Третий — реклама в Яндексе: клиенты приходят сразу, но только пока вы платите. Я вела рекламу своего дела, поэтому подскажу, с чего начать и как не слить бюджет на кликах, которые никуда не ведут. Настройка — отдельный разговор.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= ПРИЗЫВ ================= -->
+  <section class="cta-section">
+    <div class="wrap">
+      <div class="cta-box">
+        <div>
+          <h2>Расскажите о своём деле. Найдём подходящее решение.</h2>
+          <p>Даже если пока есть только идея — начнём с неё.</p>
+        </div>
+        <a class="btn" href="#contact">Оставить заявку <span class="btn__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
@@ -579,8 +805,9 @@
         <div class="footer__col">
           <h4>Разделы</h4>
           <a href="#services">Услуги</a>
+          <a href="#portfolio">Работы</a>
           <a href="#prices">Цены</a>
-          <a href="#portfolio">Примеры</a>
+          <a href="#about">Обо мне</a>
           <a href="#faq">Вопросы</a>
         </div>
         <div class="footer__col">

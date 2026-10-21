@@ -50,7 +50,8 @@ a{color:inherit;text-decoration:none}
 button,input,textarea,select{font:inherit}
 h1,h2,h3,h4,p{margin-top:0}
 ul{margin:0;padding:0}
-:target{scroll-margin-top:calc(var(--header-h) + 18px)}
+/* любой якорь не должен уезжать под липкую шапку */
+[id]{scroll-margin-top:calc(var(--header-h) + 18px)}
 
 /* --- каркас -------------------------------------------------------------- */
 .wrap{
@@ -347,7 +348,122 @@ ul{margin:0;padding:0}
 .extras li::before{content:"↗";color:#74895f;flex-shrink:0}
 .extras b{color:var(--ink);font-weight:600}
 
-/* --- примеры ------------------------------------------------------------- */
+/* --- примеры: настоящие работы ------------------------------------------- */
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.work{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
+}
+.work:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:#d3d8c4}
+.work__cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e8e4da}
+.work__cover img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  transition:transform .5s var(--ease);
+}
+.work:hover .work__cover img{transform:scale(1.035)}
+.work__badge{
+  position:absolute;left:14px;top:14px;
+  font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 11px;border-radius:100px;
+  background:rgba(255,253,249,.95);color:var(--green);
+  box-shadow:0 6px 16px rgba(30,40,32,.16);
+}
+.work__badge--real{background:var(--green);color:var(--lime)}
+.work__body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work__body h3{font-family:"Manrope",var(--sans);font-size:16.5px;font-weight:700;margin:0;letter-spacing:-.2px}
+.work__body p{margin:0;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:11px;padding:5px 10px;border-radius:100px;background:#edefe2;color:#4d5842}
+.tag--gold{background:var(--lime);color:#2b402f}
+.work__link{
+  margin-top:auto;padding-top:4px;
+  font-size:13.5px;font-weight:600;color:var(--green-soft);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.work__link:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+
+.concepts{margin-top:56px}
+.concepts__head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.concepts__head h3{
+  font-family:var(--serif);font-weight:500;font-size:23px;letter-spacing:-.02em;margin:0;
+}
+.concepts__head p{margin:0;font-size:13px;color:var(--muted);max-width:430px}
+
+/* --- кому подойдут ------------------------------------------------------- */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fit__col{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:28px 28px 30px;
+}
+.fit__col--no{background:#f7f0e7;border-color:#e6d9ca}
+.fit__col h3{
+  font-family:"Manrope",var(--sans);font-size:17px;font-weight:700;margin:0 0 4px;
+  display:flex;align-items:center;gap:9px;
+}
+.fit__col h3 .fit__sign{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:13px;font-weight:700;flex-shrink:0;
+}
+.fit__col--yes .fit__sign{background:#e2ead6;color:#33513a}
+.fit__col--no .fit__sign{background:#eed7cd;color:#8a4a3c}
+.fit__col > p{margin:0;font-size:12.5px;color:#7d8074}
+.fit-list{list-style:none;display:grid;gap:14px;margin:20px 0 0}
+.fit-list li{display:flex;gap:11px;font-size:13.5px;line-height:1.65;color:var(--muted)}
+.fit-list li b{color:var(--ink);font-weight:600}
+.fit-list__mark{
+  width:21px;height:21px;border-radius:50%;display:grid;place-items:center;
+  flex-shrink:0;font-size:11px;margin-top:2px;
+}
+.fit-list--yes .fit-list__mark{background:#e2ead6;color:#33513a}
+.fit-list--no .fit-list__mark{background:#eed7cd;color:#8a4a3c}
+.spheres{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.sphere{
+  font-size:12.5px;padding:8px 14px;border-radius:100px;
+  border:1px solid var(--line);background:var(--bg);color:#4d5842;
+}
+
+/* --- полоса «не нашли свою сферу» ---------------------------------------- */
+.band{
+  background:var(--green);color:var(--paper);border-radius:var(--radius-lg);
+  padding:38px 44px;display:flex;justify-content:space-between;align-items:center;
+  gap:28px;flex-wrap:wrap;position:relative;overflow:hidden;
+}
+.band::after{
+  content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+  border:1px solid rgba(215,231,164,.18);right:-70px;bottom:-120px;
+  box-shadow:0 0 0 26px rgba(215,231,164,.05),0 0 0 52px rgba(215,231,164,.05);
+}
+.band__text{position:relative;z-index:1}
+.band h2{
+  font-family:var(--serif);font-weight:500;font-size:clamp(24px,3vw,34px);
+  line-height:1.15;letter-spacing:-.02em;margin:0 0 10px;color:#fff;
+}
+.band p{margin:0;font-size:14px;color:#c6d0c0;max-width:520px;line-height:1.7}
+.band__actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.band .btn{background:var(--lime);color:#22392c}
+.band .btn:hover{background:#e3efb9;color:#22392c;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.band .btn--light{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+.band .btn--light:hover{background:rgba(255,255,255,.12);color:#fff;box-shadow:none}
+
+/* --- обо мне ------------------------------------------------------------- */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.about__text p{color:var(--muted);font-size:14.5px;line-height:1.85;margin:0 0 14px}
+.about__text p:last-of-type{margin-bottom:0}
+.about__text a{border-bottom:1px solid var(--line-strong)}
+.about__text a:hover{border-bottom-color:var(--green);color:var(--green-soft)}
+.about__actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}
+.about__photo{position:relative;border-radius:26px;overflow:hidden;box-shadow:var(--shadow-card)}
+.about__photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 28%}
+.about__quote{
+  position:absolute;left:18px;right:18px;bottom:18px;
+  background:rgba(255,253,249,.95);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.7);border-radius:14px;
+  padding:16px 18px;font-size:12.5px;line-height:1.6;color:#3f473c;
+}
+.about__quote b{display:block;font-size:13px;color:var(--ink);margin-bottom:3px}
+
+/* --- примеры: прежние карточки-концепции --------------------------------- */
 .showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .showcase--three{grid-template-columns:repeat(3,1fr)}
 .project{border-radius:20px;overflow:hidden;background:#e8e4da;display:flex;flex-direction:column}
@@ -434,7 +550,7 @@ ul{margin:0;padding:0}
 .mini-lines span:nth-child(3){background:#c5d2ba}
 
 /* --- шаги ---------------------------------------------------------------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .step{border-top:1px solid #c9c6bb;padding:20px 14px 0 0}
 .step__num{font-family:var(--serif);font-style:italic;font-size:22px;color:#798c5f}
 .step h3{font-size:15px;margin:16px 0 8px;font-family:"Manrope",var(--sans);font-weight:700}
@@ -620,7 +736,14 @@ ul{margin:0;padding:0}
   .section-head{flex-direction:column;align-items:flex-start;gap:14px}
   .section-head p{max-width:520px}
   .features{grid-template-columns:1fr;gap:32px}
-  .steps{grid-template-columns:1fr 1fr;row-gap:26px}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:26px}
+  .works{grid-template-columns:1fr}
+  .fit{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:30px}
+  .about__photo{max-width:420px}
+  .band{padding:30px 26px;flex-direction:column;align-items:flex-start}
+  .band__actions{width:100%}
+  .band__actions .btn{flex:1}
   .cta-box{flex-direction:column;align-items:flex-start;padding:38px 30px}
   .contact{display:flex;flex-direction:column;gap:28px}
   .contact-copy{order:1}
