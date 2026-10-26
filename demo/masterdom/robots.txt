@@ -1,0 +1,3 @@
+# Demonstration build: indexing disabled on purpose.
+User-agent: *
+Disallow: /
