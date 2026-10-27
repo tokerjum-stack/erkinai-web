@@ -940,3 +940,6 @@ ul { margin: 0; padding: 0; list-style: none; }
    оставляли в последнем ряду пустую ячейку. */
 /* min(420px, 100%) — иначе на телефоне колонка в 420 px шире экрана и появляется прокрутка вбок */
 .price-list { grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); }
+
+/* логотип-аббревиатура «ТК»: чуть мельче и с разрядкой, иначе буквы слипаются */
+.brand__mark { font-size: 18px; letter-spacing: .05em; }
