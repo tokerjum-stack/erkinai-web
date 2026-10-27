@@ -935,3 +935,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .brand__tag { white-space: nowrap; }
 .ph { background: linear-gradient(140deg, #e3eef5, #d5e5ef 55%, #c4d9e6); }
 .ph > svg { opacity: .5; }
+
+/* Прайс на этом сайте — в две колонки: при трёх колонках восемь позиций
+   оставляли в последнем ряду пустую ячейку. */
+.price-list { grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
