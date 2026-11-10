@@ -828,3 +828,36 @@ ul{margin:0;padding:0}
   body{background:#fff;color:#000}
   .section{padding:20px 0}
 }
+
+/* ---------------------------------------------------------------
+   Читаемость: основной текст не мельче 15px (10 ноября 2026)
+   Подняты только абзацы и подписи, которые читают.
+   Декоративные метки (10-11px капсом) не тронуты намеренно.
+   --------------------------------------------------------------- */
+:root{--read:15.5px}
+
+.section-head p,
+.service p,
+.work__body p,
+.fit-list li,
+.check,
+.band p{font-size:var(--read);line-height:1.7}
+
+.step p,
+.price__note,
+.project__info p,
+.concepts__head p,
+.fit__col > p,
+.showcase__note,
+.about__quote{font-size:15px;line-height:1.65}
+
+.about__text p,
+.feature-copy > p{font-size:16px;line-height:1.8}
+
+.fact dd{font-size:14px}
+
+@media (max-width:760px){
+  :root{--read:15px}
+  .about__text p,
+  .feature-copy > p{font-size:15.5px}
+}
