@@ -230,3 +230,54 @@
     });
   });
 })();
+
+/* ---------------------------------------------------------------
+   Полоса-обещание: слова проявляются по мере прокрутки
+   (landing-page-design, B11). Анимация только opacity,
+   с уважением к prefers-reduced-motion.
+   --------------------------------------------------------------- */
+(function () {
+  var band = document.querySelector('[data-reveal-words]');
+  if (!band) return;
+
+  var words = (band.textContent || '').trim().split(/\s+/);
+  if (words.length < 2) return;
+
+  band.textContent = '';
+  var spans = words.map(function (w, i) {
+    var s = document.createElement('span');
+    s.className = 'w';
+    s.textContent = w + (i < words.length - 1 ? ' ' : '');
+    band.appendChild(s);
+    return s;
+  });
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    spans.forEach(function (s) { s.classList.add('on'); });
+    return;
+  }
+
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var trigger = window.innerHeight * 0.72;
+    for (var i = 0; i < spans.length; i++) {
+      if (spans[i].classList.contains('on')) continue;
+      if (spans[i].getBoundingClientRect().top < trigger) {
+        spans[i].classList.add('on');
+      } else {
+        break;
+      }
+    }
+  }
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();

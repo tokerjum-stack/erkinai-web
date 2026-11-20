@@ -830,11 +830,11 @@ ul{margin:0;padding:0}
 }
 
 /* ---------------------------------------------------------------
-   Читаемость: основной текст не мельче 15px (10 ноября 2026)
-   Подняты только абзацы и подписи, которые читают.
+   Читаемость: основной текст на шаге 16px (11 ноября 2026)
+   Размеры сведены к шкале: 12 / 14 / 16 / 18.
    Декоративные метки (10-11px капсом) не тронуты намеренно.
    --------------------------------------------------------------- */
-:root{--read:15.5px}
+:root{--read:16px}
 
 .section-head p,
 .service p,
@@ -849,7 +849,7 @@ ul{margin:0;padding:0}
 .concepts__head p,
 .fit__col > p,
 .showcase__note,
-.about__quote{font-size:15px;line-height:1.65}
+.about__quote{font-size:16px;line-height:1.65}
 
 .about__text p,
 .feature-copy > p{font-size:16px;line-height:1.8}
@@ -857,7 +857,57 @@ ul{margin:0;padding:0}
 .fact dd{font-size:14px}
 
 @media (max-width:760px){
-  :root{--read:15px}
+  :root{--read:16px}
   .about__text p,
-  .feature-copy > p{font-size:15.5px}
+  .feature-copy > p{font-size:16px}
+}
+
+/* ---------------------------------------------------------------
+   Полоса-обещание: крупная фраза, слова проявляются при прокрутке
+   (landing-page-design, B11 — обязательный момент страницы)
+   --------------------------------------------------------------- */
+.tagline-band{
+  background:var(--green);
+  color:var(--paper);
+  padding:96px 0;
+}
+
+.tagline{
+  margin:0;
+  max-width:960px;
+  font-family:var(--serif);
+  font-size:clamp(28px,4.6vw,58px);
+  line-height:1.18;
+  letter-spacing:-.01em;
+  text-wrap:balance;
+}
+
+.tagline .w{
+  opacity:.28;
+  transition:opacity .5s cubic-bezier(.22,1,.36,1);
+}
+
+.tagline .w.on{opacity:1}
+
+@media (max-width:760px){
+  .tagline-band{padding:64px 0}
+  .tagline{font-size:clamp(26px,7vw,34px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .tagline .w{opacity:1;transition:none}
+}
+
+/* ---------------------------------------------------------------
+   Заголовок первого экрана: две строки на любой ширине
+   Новый заголовок длиннее прежнего, поэтому кегль ограничен сверху,
+   а перенос балансируется (landing-page-design, B5).
+   --------------------------------------------------------------- */
+.hero h1{
+  font-size:clamp(32px,3.9vw,56px);
+  text-wrap:balance;
+}
+
+@media (max-width:760px){
+  .hero h1{font-size:clamp(30px,8.4vw,40px)}
 }
