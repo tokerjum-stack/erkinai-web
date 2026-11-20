@@ -911,3 +911,53 @@ ul{margin:0;padding:0}
 @media (max-width:760px){
   .hero h1{font-size:clamp(30px,8.4vw,40px)}
 }
+
+/* ---------------------------------------------------------------
+   Карточки демо стали ссылками (11 ноября)
+   Раньше это были картинки со стрелкой-декорацией. Теперь вся
+   карточка ведёт на живой макет: подсветка при наведении и
+   видимая обводка при работе с клавиатуры.
+   --------------------------------------------------------------- */
+.project--link{
+  display:flex;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+
+.project--link:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(38,61,50,.14)}
+.project--link:active{transform:translateY(-1px)}
+.project--link:focus-visible{
+  outline:3px solid var(--green);
+  outline-offset:3px;
+}
+
+/* Подсказка «Открыть демо» поверх макета при наведении и фокусе.
+   Только прозрачность, ничего не двигает. */
+.project--link{position:relative}
+
+.project__visual::after{
+  content:"Открыть демо ↗";
+  position:absolute;
+  inset:auto 18px 18px 18px;
+  padding:11px 16px;
+  border-radius:100px;
+  background:var(--green);
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  text-align:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s var(--ease);
+}
+
+.project--link:hover .project__visual::after,
+.project--link:focus-visible .project__visual::after{opacity:1}
+
+.project--link:focus-visible{outline-width:2px;outline-offset:2px}
+
+@media (prefers-reduced-motion:reduce){
+  .project--link,.project__visual::after{transition:none}
+  .project--link:hover{transform:none}
+}
